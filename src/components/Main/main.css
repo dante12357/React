@@ -1,0 +1,11 @@
+.wrap {
+  padding-left: 236px;
+  padding-top: 70px;
+}
+@media screen and (max-width: 1279px) {
+  .wrap {
+    padding-left: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
