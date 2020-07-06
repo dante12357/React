@@ -24,6 +24,7 @@ import {Formik, Field, Form} from 'formik'
 import * as yup from 'yup'
 import {toast} from 'react-toastify';
 import {DatePickerField} from "./components";
+import {User_Query} from "../../UserList";
 
 const useStyles = makeStyles(() => ({
     drawer: {
@@ -33,10 +34,10 @@ const useStyles = makeStyles(() => ({
 
 const POST_MUTATION = gql`
     mutation PostMutation( $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
-        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position: String!) {
+        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position: String!, $avatarUrl: String!) {
 
         addUser(name: $name, lastName: $lastName, birthday: $birthday, email: $email, dateEmployment: $dateEmployment,
-            phone: $phone, probation: $probation, salary: $salary, position: $position) {
+            phone: $phone, probation: $probation, salary: $salary, position: $position, avatarUrl: $avatarUrl) {
             id,
             name,
             lastName,
@@ -47,6 +48,7 @@ const POST_MUTATION = gql`
             probation,
             salary,
             position,
+            avatarUrl
         }
     }
 `;
@@ -70,10 +72,11 @@ const AddUser = props => {
     const classes = useStyles();
 
     const [state, setState] = useState({
-        disabled: false
+        disabled: false,
+        avatarUrl: ''
     });
 
-    const {name, lastName, birthday, email, dateEmployment, phone, probation, salary, position, disabled} = state;
+    const {name, lastName, birthday, email, dateEmployment, phone, probation, salary, position, avatarUrl, disabled} = state;
 
     const handleChan = event => {
         setState({
@@ -122,7 +125,14 @@ const AddUser = props => {
 
             <Mutation mutation={POST_MUTATION} variables={{
                 name, lastName, birthday,
-                email, dateEmployment, phone, probation, salary, position
+                email, dateEmployment, phone, probation, salary, position,avatarUrl
+            }}
+            update={(cache, { data: { addUser } })=> {
+                const {allUsers}  = cache.readQuery({ query: User_Query });
+                cache.writeQuery({
+                    query: User_Query,
+                    data: { allUsers: allUsers.concat([addUser])},
+                });
             }}>
                 {(addUser, {data}) =>
 
@@ -144,11 +154,11 @@ const AddUser = props => {
                             values['probation'] = disabled ? "Нет испытательного срока" :  values['probation'] ;
 
                             addUser({
-                                variables: values
+                                variables: values,
+
                             });
                             success();
-                            handleSidebarClose();
-                            props.closeForm(false)
+                            closeForm(false)
                         }}
                     >
                         {({errors, handleChange, touched}) => (
@@ -156,7 +166,7 @@ const AddUser = props => {
                             <Form
                                 autoComplete="off"
                             >
-                                <IconButton onClick={() => {props.closeForm(false)}}>
+                                <IconButton onClick={() => {closeForm(false)}}>
                                     <ChevronRightIcon />
                                 </IconButton>
                                 <CardHeader

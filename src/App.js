@@ -15,6 +15,7 @@ export default class App extends Component {
     render() {
 
         return (
+
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <ToastContainer/>
                 <Router history={browserHistory}>

@@ -1,0 +1,9 @@
+composer.lock
+composer.json
+go-lemp.bash
+default
+package-lock.json
+xdebug.ini
+webpack.config.js
+vendor
+node_modules
