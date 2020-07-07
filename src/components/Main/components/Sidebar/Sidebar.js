@@ -3,8 +3,9 @@ import clsx from 'clsx';
 import {makeStyles} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import {Divider, Drawer} from '@material-ui/core';
-import PeopleIcon from '@material-ui/icons/People';
 import {Profile, SidebarNav} from './components';
+import PeopleIcon from '@material-ui/icons/People';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
@@ -30,6 +31,11 @@ const Sidebar = props => {
       title: 'Список сотрудников',
       href: '/users',
       icon: <PeopleIcon />
+    },
+    {
+      title: 'Настройки',
+      href: '/settings',
+      icon: <SettingsIcon />
     },
   ];
 

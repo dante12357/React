@@ -30,6 +30,13 @@ class QueryType extends ObjectType
                             return Db::select('SELECT * FROM userList');
                         }
                     ],
+                    'allPositions' => [
+                        'type' => Types::listOf(Types::position()),
+                        'description' => 'Список должностей',
+                        'resolve' => function () {
+                            return Db::select('SELECT * FROM `positions`');
+                        }
+                    ],
                 ];
             }
         ];

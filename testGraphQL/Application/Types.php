@@ -2,6 +2,7 @@
 
 include_once "Type/QueryType.php";
 include_once "Type/UserType.php";
+include_once "Type/PositionType.php";
 include_once "Type/MutationType.php";
 include_once "Type/InputUserType.php";
 
@@ -11,6 +12,7 @@ class Types
 {
     private static $query;
     private static $user;
+    private static $position;
     private static $mutation;
     private static $inputUser;
 
@@ -34,10 +36,13 @@ class Types
         return Type::listOf($type);
     }
 
-
     public static function user()
     {
         return self::$user ?: (self::$user = new UserType());
+    }
+    public static function position()
+    {
+        return self::$position ?: (self::$position = new PositionType());
     }
 
     public static function mutation()

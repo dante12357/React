@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import UserTable from './components/Table/Table'
+import UserTable from './components/UserTable/UserTable'
 
 import './userList.css'
 import UserToolbar from './components/UserToolbar';
@@ -8,9 +8,6 @@ import gql from 'graphql-tag';
 import { withRouter } from 'react-router'
 import {connect} from "react-redux";
 
-function createData(id, name, number, email, position, avatarUrl) {
-    return {id, name, number, email, position, avatarUrl};
-}
 
 const User_Query = gql`
     {
@@ -20,7 +17,7 @@ const User_Query = gql`
             lastName,
             email,
             phone,
-            position,
+            position_id,
             avatarUrl
         }
     }

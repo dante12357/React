@@ -9,7 +9,7 @@ import {
     Grid,
     Button,
     TextField,
-    Drawer, useTheme, useMediaQuery,
+    Drawer,
     InputAdornment,
     MenuItem,
     Checkbox,
@@ -18,7 +18,8 @@ import {
 } from '@material-ui/core';
 import ChevronRightIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
-import {Mutation} from 'react-apollo'
+import {Mutation, Query} from 'react-apollo'
+
 import gql from 'graphql-tag'
 import {Formik, Field, Form} from 'formik'
 import * as yup from 'yup'
@@ -34,10 +35,10 @@ const useStyles = makeStyles(() => ({
 
 const POST_MUTATION = gql`
     mutation PostMutation( $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
-        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position: String!, $avatarUrl: String!) {
+        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position_id: Int!, $avatarUrl: String!) {
 
         addUser(name: $name, lastName: $lastName, birthday: $birthday, email: $email, dateEmployment: $dateEmployment,
-            phone: $phone, probation: $probation, salary: $salary, position: $position, avatarUrl: $avatarUrl) {
+            phone: $phone, probation: $probation, salary: $salary, position_id: $position_id, avatarUrl: $avatarUrl) {
             id,
             name,
             lastName,
@@ -47,25 +48,36 @@ const POST_MUTATION = gql`
             phone,
             probation,
             salary,
-            position,
+            position_id,
             avatarUrl
         }
     }
 `;
+const position_Query = gql`
+    {
+        allPositions{
+            id,
+            position,
+        }
+    }
+`;
+// const phoneRegExp =/^([0]([.][0-9]+)?|[1-9]([0-9]+)?([.][0-9]+)?)$/;
 
+const ReviewSchema = yup.object().shape(
+    {
+        name: yup.string().required("Введите имя "),
+        lastName: yup.string().required("Введите фамилию"),
+        // birthday: yup.string().required("Выберите дату дня рождения"),
+        email: yup.string().required("Введите email").email("Неправильный формат email"),
+        //dateEmployment: yup.date().required("Выберите дату приёма на работу"),
+        phone: yup.string().required("Введите номер")
+        // .matches(phoneRegExp,"Неправильно написан номер")
+        ,
+        //probation: yup.string().oneOf(['1 месяц', '2 месяца', '3 месяца', '4 месяца'], "Выберите один из сроков").required(),
+        salary: yup.number().min(0, "Зарплата отрицательная, а ВЫ гений").required("Введите зарплату"),
+        position_id: yup.string().required("Добавьте должность"),
 
-const ReviewSchema = yup.object().shape({
-    name: yup.string().required("Введите имя "),
-    lastName: yup.string().required("Введите фамилию"),
-    birthday: yup.string().required("Выберите дату дня рождения"),
-    email: yup.string().required("Введите email"),
-    //dateEmployment: yup.date().required("Выберите дату приёма на работу"),
-    //phone: yup.string().required("This field is required."),
-    //probation: yup.string().oneOf(['1 месяц', '2 месяца', '3 месяца', '4 месяца'], "Выберите один из сроков").required(),
-    salary: yup.number().min(0, "Зарплата отрицательная, а ВЫ гений").required("Введите зарплату"),
-    position: yup.string().required("Добавьте должность"),
-
-});
+    });
 
 const AddUser = props => {
     const {open, onClose, closeForm} = props;
@@ -76,7 +88,7 @@ const AddUser = props => {
         avatarUrl: ''
     });
 
-    const {name, lastName, birthday, email, dateEmployment, phone, probation, salary, position, avatarUrl, disabled} = state;
+    const {name, lastName, birthday, email, dateEmployment, phone, probation, salary, position_id, avatarUrl, disabled} = state;
 
     const handleChan = event => {
         setState({
@@ -125,15 +137,15 @@ const AddUser = props => {
 
             <Mutation mutation={POST_MUTATION} variables={{
                 name, lastName, birthday,
-                email, dateEmployment, phone, probation, salary, position,avatarUrl
+                email, dateEmployment, phone, probation, salary, position_id, avatarUrl
             }}
-            update={(cache, { data: { addUser } })=> {
-                const {allUsers}  = cache.readQuery({ query: User_Query });
-                cache.writeQuery({
-                    query: User_Query,
-                    data: { allUsers: allUsers.concat([addUser])},
-                });
-            }}>
+                      update={(cache, {data: {addUser}}) => {
+                          const {allUsers} = cache.readQuery({query: User_Query});
+                          cache.writeQuery({
+                              query: User_Query,
+                              data: {allUsers: allUsers.concat([addUser])},
+                          });
+                      }}>
                 {(addUser, {data}) =>
 
                     <Formik
@@ -146,12 +158,12 @@ const AddUser = props => {
                             phone: '',
                             probation: '1 месяц',
                             salary: '',
-                            position: '',
+                            position_id: '',
                         }}
                         validationSchema={ReviewSchema}
                         onSubmit={(values, actions) => {
 
-                            values['probation'] = disabled ? "Нет испытательного срока" :  values['probation'] ;
+                            values['probation'] = disabled ? "Нет испытательного срока" : values['probation'];
 
                             addUser({
                                 variables: values,
@@ -161,13 +173,13 @@ const AddUser = props => {
                             closeForm(false)
                         }}
                     >
-                        {({errors, handleChange, touched}) => (
+                        {({errors, handleChange, touched, handleBlur}) => (
 
-                            <Form
-                                autoComplete="off"
-                            >
-                                <IconButton onClick={() => {closeForm(false)}}>
-                                    <ChevronRightIcon />
+                            <Form autoComplete="off">
+                                <IconButton onClick={() => {
+                                    closeForm(false)
+                                }}>
+                                    <ChevronRightIcon/>
                                 </IconButton>
                                 <CardHeader
                                     subheader="Добавьте нового сотрудника"
@@ -186,6 +198,7 @@ const AddUser = props => {
                                             margin="dense"
                                             name="name"
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                             variant="outlined"
                                             helperText={
                                                 errors.name && touched.name
@@ -201,6 +214,7 @@ const AddUser = props => {
                                             margin="dense"
                                             name="lastName"
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                             variant="outlined"
                                             helperText={
                                                 errors.lastName && touched.lastName
@@ -211,14 +225,9 @@ const AddUser = props => {
                                         <Field
                                             name="birthday"
                                             component={DatePickerField}
-                                            error={errors.birthday && touched.birthday}
                                             label="День рождения"
 
-                                            helperText={
-                                                errors.birthday && touched.birthday
-                                                    ? errors.birthday
-                                                    : null
-                                            }
+
                                         />
                                         <TextField
                                             error={errors.email && touched.email}
@@ -227,6 +236,7 @@ const AddUser = props => {
                                             margin="dense"
                                             name="email"
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                             variant="outlined"
                                             helperText={
                                                 errors.email && touched.email
@@ -235,31 +245,11 @@ const AddUser = props => {
                                             }
                                         />
 
-                                        {/*<TextField*/}
-                                        {/*    error={errors.dateEmployment && touched.dateEmployment}*/}
-                                        {/*    fullWidth*/}
-                                        {/*    label="Дата приёма на работу"*/}
-                                        {/*    margin="dense"*/}
-                                        {/*    name="dateEmployment"*/}
-                                        {/*    onChange={handleChange}*/}
-                                        {/*    variant="outlined"*/}
-                                        {/*    type='date'*/}
-                                        {/*    helperText={*/}
-                                        {/*        errors.dateEmployment && touched.dateEmployment*/}
-                                        {/*            ? errors.dateEmployment*/}
-                                        {/*            : null*/}
-                                        {/*    }*/}
-                                        {/*/>*/}
                                         <Field
                                             name="dateEmployment"
                                             component={DatePickerField}
-                                            error={errors.dateEmployment && touched.dateEmployment}
                                             label="Дата приёма на работу"
-                                            helperText={
-                                                errors.dateEmployment && touched.dateEmployment
-                                                    ? errors.dateEmployment
-                                                    : null
-                                            }
+
                                         />
 
                                         <TextField
@@ -269,6 +259,7 @@ const AddUser = props => {
                                             margin="dense"
                                             name="phone"
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                             variant="outlined"
                                             helperText={
                                                 errors.phone && touched.phone
@@ -316,6 +307,7 @@ const AddUser = props => {
                                             margin="dense"
                                             name="salary"
                                             onChange={handleChange}
+                                            onBlur={handleBlur}
                                             variant="outlined"
                                             type="number"
                                             InputProps={{
@@ -331,21 +323,38 @@ const AddUser = props => {
                                                     : null
                                             }
                                         />
-                                        <TextField
-                                            error={errors.position && touched.position}
-                                            fullWidth
-                                            label="Должность"
-                                            margin="dense"
-                                            name="position"
-                                            onChange={handleChange}
-                                            variant="outlined"
-                                            helperText={
-                                                errors.position && touched.position
-                                                    ? errors.position
-                                                    : null
-                                            }
-                                        />
+                                        <Query query={position_Query}>
+                                            {({loading, error, data}) =>
+                                            {
+                                                if (loading) return <div></div>
+                                                if (error) return <div>Error</div>
+                                                return (
+                                                    <TextField
+                                                        error={errors.position_id && touched.position_id}
+                                                        select
+                                                        fullWidth
+                                                        label="Должность"
+                                                        margin="dense"
+                                                        name="position_id"
+                                                        onChange={handleChange}
+                                                        onBlur={handleBlur}
+                                                        variant="outlined"
+                                                        helperText={
+                                                            errors.position_id && touched.position_id
+                                                                ? errors.position_id
+                                                                : null
+                                                        }
+                                                    >
 
+                                                {data.allPositions.map((option) => (
+                                                        <MenuItem key={option.id} value={option.id}>
+                                                            {option.position}
+                                                        </MenuItem>
+                                                    ))}
+                                                    </TextField>
+                                                )
+                                            }}
+                                        </Query>
                                     </Grid>
                                 </CardContent>
                                 <CardActions>
