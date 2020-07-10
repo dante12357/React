@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 const SearchInput = props => {
-  const { value, onChange,className, ...rest} = props
+  const { value,placeholder, onChange,className, ...rest} = props
 
   const classes = useStyles();
   return(
@@ -42,7 +42,7 @@ const SearchInput = props => {
       <SearchIcon className="icon" />
       <Input
         className={classes.input}
-        placeholder={'Введите имя'}
+        placeholder={placeholder}
         value={value}
         disableUnderline
         onChange={onChange}
@@ -54,7 +54,7 @@ const SearchInput = props => {
 SearchInput.propType ={
   onChange: PropTypes.func,
   value: PropTypes.func,
-
+  placeholder: PropTypes.string
 }
 
 export default SearchInput;

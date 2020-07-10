@@ -6,7 +6,6 @@ import UserToolbar from './components/UserToolbar';
 import {Query} from 'react-apollo';
 import gql from 'graphql-tag';
 import { withRouter } from 'react-router'
-import {connect} from "react-redux";
 
 
 const User_Query = gql`
@@ -18,6 +17,7 @@ const User_Query = gql`
             email,
             phone,
             position_id,
+            position,
             avatarUrl
         }
     }
@@ -84,5 +84,5 @@ class UserList extends Component {
     }
 }
 
-export default withRouter (UserList);
+export default UserList;
 export {User_Query}

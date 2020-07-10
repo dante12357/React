@@ -38,6 +38,7 @@ const UserToolbar = props => {
       <div className="row">
         <SearchInput
           label={'Введите имя'}
+          placeholder={'Введите имя'}
           onChange={onChange}
           value={value}
         />

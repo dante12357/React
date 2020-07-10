@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 
 import {Query} from 'react-apollo';
 import gql from 'graphql-tag';
@@ -9,12 +9,18 @@ import {Card,
     Divider} from '@material-ui/core';
 
 import './position.css'
-
+import {SearchInput} from "../../components";
+import {PositionToolbar} from "./components"
 const position_Query = gql`
     {
-        allPositions{
-            id,
-            position,
+#        allPositions{
+#            PositionId,
+#            position,
+#        },
+        getNumPosition{
+            PositionId
+            position
+            positionCount
         }
     }
 `;
@@ -30,7 +36,10 @@ const position_Query = gql`
 const Position = props => {
 
     const {} = props;
-
+    const [state, setState] = useState({
+        query: ''
+    }
+    );
         return (
             <div>
 
@@ -41,7 +50,11 @@ const Position = props => {
                         return (
                             <div className="Position">
                                 <Card>
-                                <AddPosition/>
+                                    <PositionToolbar
+                                        onChange={e => setState({query: e.target.value})}
+                                        value={state.query}
+                                    />
+
                                 <Divider/>
                                 <div className="tableContent">
                                     <PositionTable header={[
@@ -52,13 +65,13 @@ const Position = props => {
                                         },
                                         {
                                             name: 'Количество сотрудников с должностью ',
-                                            prop: 'name'
+                                            prop: 'positionCount'
                                         },
                                         {
                                             name: 'Удалить должность',
                                             prop: 'delete'
                                         },
-                                    ]} key={data.allPositions.id} data={data.allPositions}
+                                    ]} key={data.getNumPosition.PositionId} data={  data.getNumPosition }
                                     />
                                 </div>
                                 </Card>

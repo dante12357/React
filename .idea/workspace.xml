@@ -2,43 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290fd45d-b33e-49f6-9f2c-1f758ca545ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/Position/Position.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/AddPosition/AddPosition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/AddPosition/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/table.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/table.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Position/position.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Settings/Settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Settings/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Settings/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Settings/settings.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/user.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testGraphQL/Application/Type/PositionType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/addPosition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Position/components/RemovePosition/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/User/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchInput/SearchInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/Position.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/Position.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/AddPosition/AddPosition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/AddPosition/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/table.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/position.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/position.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/position.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/position.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Settings/settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/settings.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserList/UserList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/UserList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/Table/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/Table/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/Table/table.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/Table/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/QueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/testGraphQL/Application/Type/QueryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/testGraphQL/Application/Type/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Types.php" beforeDir="false" afterPath="$PROJECT_DIR$/testGraphQL/Application/Types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/UserToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/UserToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/InputUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/InputUserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/PositionType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/PositionType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/QueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/Application/Types.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testGraphQL/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/graphql.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,29 +59,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/Position/Position.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="278">
+              <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Position/position.scss">
+        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="150">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Position/components/AddPosition/AddPosition.js">
+        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="337">
+              <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -88,23 +93,73 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Position/components/AddPosition/index.js">
+        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" selection-start-column="26" selection-end-column="37" />
+            <state relative-caret-position="30">
+              <caret line="2" column="19" selection-start-line="2" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="599">
+              <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-end-line="66" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Main/Main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#318#373#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1665">
+              <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-end-line="37" />
             </state>
           </provider>
         </entry>
@@ -136,6 +191,14 @@
       <find>RouterLink</find>
       <find>position_id</find>
       <find>position</find>
+      <find>numposi</find>
+      <find>numPosition</find>
+      <find>a</find>
+      <find>allp</find>
+      <find>all</find>
+      <find>.css</find>
+      <find>delet</find>
+      <find>use</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,38 +207,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/addUser.scss" />
-        <option value="$PROJECT_DIR$/src/components/Main/Main.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/components/DatePickerField/index.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/index.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/components/index.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/components/DatePickerField/DatePickerField.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/UserToolbar.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/components/Main/main.css" />
-        <option value="$PROJECT_DIR$/src/components/Main/main.scss" />
-        <option value="$PROJECT_DIR$/src/views/User/user.scss" />
-        <option value="$PROJECT_DIR$/src/views/User/User.js" />
-        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/position/position.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/position/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/Position/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/settings.scss" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" />
-        <option value="$PROJECT_DIR$/src/Routes.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Settings.js" />
-        <option value="$PROJECT_DIR$/testGraphQL/Application/Types.php" />
         <option value="$PROJECT_DIR$/testGraphQL/Application/Type/PositionType.php" />
         <option value="$PROJECT_DIR$/testGraphQL/Application/Type/QueryType.php" />
-        <option value="$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php" />
         <option value="$PROJECT_DIR$/src/views/UserList/components/Table/Table.js" />
         <option value="$PROJECT_DIR$/testGraphQL/Application/Type/UserType.php" />
         <option value="$PROJECT_DIR$/src/views/Settings/components/Position/UserList.js" />
@@ -184,17 +217,47 @@
         <option value="$PROJECT_DIR$/src/views/Position/components/Table/table.scss" />
         <option value="$PROJECT_DIR$/src/views/Position/components/Table/Table.js" />
         <option value="$PROJECT_DIR$/src/views/UserList/components/UserTable/index.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/UserList.js" />
         <option value="$PROJECT_DIR$/src/views/Position/components/addPosition/index.js" />
         <option value="$PROJECT_DIR$/src/views/Position/components/addPosition/addPosition.js" />
         <option value="$PROJECT_DIR$/src/views/Position/index.js" />
-        <option value="$PROJECT_DIR$/src/views/Position/components/index.js" />
         <option value="$PROJECT_DIR$/src/views/Position/components/PositionTable/index.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/DeletePosition/index.js" />
+        <option value="$PROJECT_DIR$/testGraphQL/Application/Types.php" />
+        <option value="$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/components/index.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/UserList.js" />
+        <option value="$PROJECT_DIR$/GraphQL/graphql.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/numPositions.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/numPositionType.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/UserType.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/NumPositionType.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Types.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/PositionType.php" />
         <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" />
-        <option value="$PROJECT_DIR$/src/views/Position/components/AddPosition/AddPosition.js" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php" />
+        <option value="$PROJECT_DIR$/src/views/Settings/Settings.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/DeletePosition/DeletePosition.js" />
         <option value="$PROJECT_DIR$/src/views/Position/position.scss" />
+        <option value="$PROJECT_DIR$/src/views/Settings/settings.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/AddPosition/addPosition.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/RemovePosition/index.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/AddPosition/AddPosition.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/UserToolbar.js" />
+        <option value="$PROJECT_DIR$/src/components/SearchInput/SearchInput.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/index.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/index.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/index.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js" />
         <option value="$PROJECT_DIR$/src/views/Position/Position.js" />
         <option value="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php" />
       </list>
     </option>
   </component>
@@ -221,13 +284,6 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
@@ -245,6 +301,24 @@
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphQL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphQL" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="GraphQL" type="462c0819:PsiDirectoryNode" />
+              <item name="Application" type="462c0819:PsiDirectoryNode" />
+              <item name="Type" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
@@ -309,6 +383,103 @@
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PositionTable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="AddPosition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="positionToolbar.scss" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="RemovePosition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Settings" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Settings" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SettingsNav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="UserList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,7 +511,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/Position/components/PositionTable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/Position/components/DeletePosition" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -354,17 +525,18 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components" />
+      <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/views/Settings" />
+      <recent name="$PROJECT_DIR$/src/views/UserList" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/Position/components/DeletePosition" />
       <recent name="$PROJECT_DIR$/src/views/Position/components/PositionTable" />
       <recent name="$PROJECT_DIR$/src/views/Settings/components/Position" />
       <recent name="$PROJECT_DIR$/src/views/Settings/components" />
       <recent name="$PROJECT_DIR$/src/views/Settings" />
-      <recent name="$PROJECT_DIR$/src/views/UserList/components" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views" />
-      <recent name="$PROJECT_DIR$/src/views/Settings" />
-      <recent name="$PROJECT_DIR$/src/views/UserList" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -409,7 +581,9 @@
       <workItem from="1593158403684" duration="4330000" />
       <workItem from="1593173784884" duration="83571000" />
       <workItem from="1593695619308" duration="1087000" />
-      <workItem from="1594020524201" duration="29117000" />
+      <workItem from="1594020524201" duration="30745000" />
+      <workItem from="1594189034196" duration="38978000" />
+      <workItem from="1594364684415" duration="12946000" />
     </task>
     <task id="LOCAL-00001" summary="добавлено автообновление таблицы, после добавления сотрудника">
       <created>1594049119749</created>
@@ -418,11 +592,18 @@
       <option name="project" value="LOCAL" />
       <updated>1594049119749</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="прогресс">
+      <created>1594132910934</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1594132910935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118105000" />
+    <option name="totallyTimeSpent" value="171657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,13 +618,13 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21101573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2167382" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49928468" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49928468" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="TypeScript" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49928468" weight="0.31445783" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
@@ -465,38 +646,29 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="добавлено автообновление таблицы, после добавления сотрудника" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлено автообновление таблицы, после добавления сотрудника" />
+    <MESSAGE value="прогресс" />
+    <option name="LAST_COMMIT_MESSAGE" value="прогресс" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/testGraphQL/graphql.php</url>
+          <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
           <line>26</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/testGraphQL/graphql.php</url>
+          <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
           <line>42</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php</url>
-          <line>50</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php</url>
-          <line>55</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/testGraphQL/graphql.php</url>
+          <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
           <line>50</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/testGraphQL/graphql.php</url>
+          <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
           <line>51</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
@@ -518,325 +690,11 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Main/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router-dom/esm/react-router-dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="246" column="4" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/User/user.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/minimatch/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router/esm/react-router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="686" column="9" selection-start-line="686" selection-start-column="9" selection-end-line="686" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/User/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/SettingsNav/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="45" column="17" selection-end-line="71" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/SidebarNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding>
-            <element signature="e#81#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#81#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/Application/Types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Error/ClientAware.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Error/Error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="372" selection-start-line="372" selection-end-line="372" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Executor/Promise/Adapter/SyncPromiseAdapter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Executor/ExecutionContext.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Executor/ReferenceExecutor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="233" selection-start-line="233" selection-end-line="233" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/Application/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/Application/Type/PositionType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/graphql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#323#343#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/Application/Type/QueryType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/Application/Type/UserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/Position/UserList.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/Position/components/AddUser/AddUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="79" column="7" lean-forward="true" selection-start-line="79" selection-start-column="7" selection-end-line="79" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/table.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/table.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/index.js" />
     <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/UserList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,68 +705,364 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="178" column="27" selection-start-line="178" selection-start-column="27" selection-end-line="178" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testGraphQL/Application/Type/MutationType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/addUser.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/Position.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/SvgIcon/SvgIcon.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="430">
+          <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/InputUserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/position.scss">
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/AddPosition/AddPosition.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="172">
+          <caret line="304" column="26" selection-start-line="304" selection-start-column="26" selection-end-line="304" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/AddPosition/index.js">
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="971" column="10" selection-start-line="971" selection-start-column="10" selection-end-line="971" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@apollo/react-common/lib/types/types.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="37" selection-start-column="26" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js">
+    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Type/Definition/Type.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="42" column="40" lean-forward="true" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="177">
+          <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/graphql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="e#323#343#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#318#373#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/NumPositionType.php" />
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/UserType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="68" column="21" lean-forward="true" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="50" column="62" lean-forward="true" selection-start-line="50" selection-start-column="62" selection-end-line="50" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/User/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/addPosition.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/apollo-client/errors/ApolloError.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@babel/types/lib/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="1806" column="16" selection-start-line="1806" selection-start-column="16" selection-end-line="1806" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#81#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/position.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/RemovePosition/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/UserList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserToolbar/UserToolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="45" selection-start-line="10" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchInput/SearchInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Main/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/Position.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="70" column="57" selection-start-line="70" selection-start-column="57" selection-end-line="70" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@babel/parser/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="9715" column="18" selection-start-line="9715" selection-start-column="18" selection-end-line="9715" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1061">
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-end-line="66" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="69" column="19" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/PositionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="16" column="47" lean-forward="true" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
         </state>
       </provider>
     </entry>

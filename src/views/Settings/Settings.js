@@ -16,7 +16,7 @@ const Settings = props => {
 
     const pages = [
         {
-            title: 'Должность',
+            title: 'Должности',
             href: '/position',
             icon: <ArrowRightIcon/>
         },

@@ -40,7 +40,7 @@ const row = (
       </TableCell>
       <TableCell component="th" scope="row">
         <div>
-          {column.position_id}
+          {column.position}
         </div>
       </TableCell>
     </TableRow>

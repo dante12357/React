@@ -41,6 +41,7 @@ const SettingsNav = props => {
 
     return (
         <List>
+
             {pages.map(page => (
                 <ListItem
                     className={classes.root}
@@ -50,6 +51,7 @@ const SettingsNav = props => {
                     component={RouterLink}
                     to={"/settings" + page.href}
                     divider
+
                 >
 
                     <ListItemText

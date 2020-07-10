@@ -18,7 +18,8 @@ import {
 } from '@material-ui/core';
 import ChevronRightIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
-import {Mutation, Query} from 'react-apollo'
+import {Query} from 'react-apollo'
+import {useMutation} from '@apollo/react-hooks';
 
 import gql from 'graphql-tag'
 import {Formik, Field, Form} from 'formik'
@@ -35,7 +36,7 @@ const useStyles = makeStyles(() => ({
 
 const POST_MUTATION = gql`
     mutation PostMutation( $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
-        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position_id: Int!, $avatarUrl: String!) {
+        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position_id: Int!,  $avatarUrl: String!) {
 
         addUser(name: $name, lastName: $lastName, birthday: $birthday, email: $email, dateEmployment: $dateEmployment,
             phone: $phone, probation: $probation, salary: $salary, position_id: $position_id, avatarUrl: $avatarUrl) {
@@ -48,6 +49,7 @@ const POST_MUTATION = gql`
             phone,
             probation,
             salary,
+            position,
             position_id,
             avatarUrl
         }
@@ -56,7 +58,7 @@ const POST_MUTATION = gql`
 const position_Query = gql`
     {
         allPositions{
-            id,
+            PositionId,
             position,
         }
     }
@@ -88,7 +90,7 @@ const AddUser = props => {
         avatarUrl: ''
     });
 
-    const {name, lastName, birthday, email, dateEmployment, phone, probation, salary, position_id, avatarUrl, disabled} = state;
+    const {disabled} = state;
 
     const handleChan = event => {
         setState({
@@ -125,6 +127,33 @@ const AddUser = props => {
         draggable: false,
         progress: undefined,
     });
+    const errorToast = () => toast.error('Ошибка', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+    });
+
+    const [addUser, {data}] = useMutation(POST_MUTATION,
+        {
+            update(cache, {data: {addUser}}) {
+                const {allUsers} = cache.readQuery({query: User_Query});
+                cache.writeQuery({
+                    query: User_Query,
+                    data: {allUsers: allUsers.concat([addUser])},
+                });
+            },
+            onError: () => {
+                errorToast()
+            },
+            onCompleted: () => {
+                success()
+            },
+
+        });
 
     return (
 
@@ -135,242 +164,233 @@ const AddUser = props => {
             anchor="right"
             variant="temporary">
 
-            <Mutation mutation={POST_MUTATION} variables={{
-                name, lastName, birthday,
-                email, dateEmployment, phone, probation, salary, position_id, avatarUrl
-            }}
-                      update={(cache, {data: {addUser}}) => {
-                          const {allUsers} = cache.readQuery({query: User_Query});
-                          cache.writeQuery({
-                              query: User_Query,
-                              data: {allUsers: allUsers.concat([addUser])},
-                          });
-                      }}>
-                {(addUser, {data}) =>
+            <div>
 
-                    <Formik
-                        initialValues={{
-                            name: '',
-                            lastName: '',
-                            birthday: new Date(),
-                            email: '',
-                            dateEmployment: new Date(),
-                            phone: '',
-                            probation: '1 месяц',
-                            salary: '',
-                            position_id: '',
-                        }}
-                        validationSchema={ReviewSchema}
-                        onSubmit={(values, actions) => {
+                <Formik
+                    initialValues={{
+                        name: '',
+                        lastName: '',
+                        birthday: new Date(),
+                        email: '',
+                        dateEmployment: new Date(),
+                        phone: '',
+                        probation: '1 месяц',
+                        salary: '',
+                        position: '',
+                        avatarUrl: '',
+                        position_id: '',
+                    }}
+                    validationSchema={ReviewSchema}
+                    onSubmit={(values, actions) => {
 
-                            values['probation'] = disabled ? "Нет испытательного срока" : values['probation'];
+                        values['probation'] = disabled ? "Нет испытательного срока" : values['probation'];
+                        addUser({
+                            variables: values,
 
-                            addUser({
-                                variables: values,
+                        });
 
-                            });
-                            success();
-                            closeForm(false)
-                        }}
-                    >
-                        {({errors, handleChange, touched, handleBlur}) => (
+                        closeForm(false)
+                    }}
+                >
+                    {({errors, handleChange, touched, handleBlur}) => (
 
-                            <Form autoComplete="off">
-                                <IconButton onClick={() => {
-                                    closeForm(false)
-                                }}>
-                                    <ChevronRightIcon/>
-                                </IconButton>
-                                <CardHeader
-                                    subheader="Добавьте нового сотрудника"
-                                    title="Добавление сотрудника"
-                                />
-                                <Divider/>
+                        <Form autoComplete="off">
+                            <IconButton onClick={() => {
+                                closeForm(false)
+                            }}>
+                                <ChevronRightIcon/>
+                            </IconButton>
+                            <CardHeader
+                                subheader="Добавьте нового сотрудника"
+                                title="Добавление сотрудника"
+                            />
+                            <Divider/>
 
-                                <CardContent>
-                                    <Grid spacing={3}>
-                                        <TextField
-                                            autoFocus
-                                            autoComplete="off"
-                                            error={errors.name && touched.name}
-                                            fullWidth
-                                            label="Имя"
-                                            margin="dense"
-                                            name="name"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            variant="outlined"
-                                            helperText={
-                                                errors.name && touched.name
-                                                    ? errors.name
-                                                    : null
-                                            }
-                                        />
+                            <CardContent>
+                                <Grid spacing={3}>
+                                    <TextField
+                                        autoFocus
+                                        autoComplete="off"
+                                        error={errors.name && touched.name}
+                                        fullWidth
+                                        label="Имя"
+                                        margin="dense"
+                                        name="name"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        variant="outlined"
+                                        helperText={
+                                            errors.name && touched.name
+                                                ? errors.name
+                                                : null
+                                        }
+                                    />
 
-                                        <TextField
-                                            error={errors.lastName && touched.lastName}
-                                            fullWidth
-                                            label="Фамилия"
-                                            margin="dense"
-                                            name="lastName"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            variant="outlined"
-                                            helperText={
-                                                errors.lastName && touched.lastName
-                                                    ? errors.lastName
-                                                    : null
-                                            }
-                                        />
-                                        <Field
-                                            name="birthday"
-                                            component={DatePickerField}
-                                            label="День рождения"
+                                    <TextField
+                                        error={errors.lastName && touched.lastName}
+                                        fullWidth
+                                        label="Фамилия"
+                                        margin="dense"
+                                        name="lastName"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        variant="outlined"
+                                        helperText={
+                                            errors.lastName && touched.lastName
+                                                ? errors.lastName
+                                                : null
+                                        }
+                                    />
+                                    <Field
+                                        name="birthday"
+                                        component={DatePickerField}
+                                        label="День рождения"
 
 
-                                        />
-                                        <TextField
-                                            error={errors.email && touched.email}
-                                            fullWidth
-                                            label="Email"
-                                            margin="dense"
-                                            name="email"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            variant="outlined"
-                                            helperText={
-                                                errors.email && touched.email
-                                                    ? errors.email
-                                                    : null
-                                            }
-                                        />
+                                    />
+                                    <TextField
+                                        error={errors.email && touched.email}
+                                        fullWidth
+                                        label="Email"
+                                        margin="dense"
+                                        name="email"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        variant="outlined"
+                                        helperText={
+                                            errors.email && touched.email
+                                                ? errors.email
+                                                : null
+                                        }
+                                    />
 
-                                        <Field
-                                            name="dateEmployment"
-                                            component={DatePickerField}
-                                            label="Дата приёма на работу"
+                                    <Field
+                                        name="dateEmployment"
+                                        component={DatePickerField}
+                                        label="Дата приёма на работу"
 
-                                        />
+                                    />
 
-                                        <TextField
-                                            error={errors.phone && touched.phone}
-                                            fullWidth
-                                            label="Номер телефона"
-                                            margin="dense"
-                                            name="phone"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            variant="outlined"
-                                            helperText={
-                                                errors.phone && touched.phone
-                                                    ? errors.phone
-                                                    : null
-                                            }
-                                        />
-                                        <TextField
-                                            fullWidth
-                                            select
-                                            label="Продолжительность испытательного срока"
-                                            margin="dense"
-                                            name="probation"
-                                            onChange={handleChange}
-                                            variant="outlined"
-                                            defaultValue={'1 месяц'}
-                                            disabled={disabled}
-                                            displayEmpty
-                                        >
-                                            {dateProbation.map((option) => (
-                                                <MenuItem key={option.value} value={option.value}>
-                                                    {option.label}
-                                                </MenuItem>
-                                            ))}
-                                        </TextField>
-                                        <FormControlLabel
-                                            margin="dense"
-                                            control={
-                                                <Checkbox
-                                                    name="disabled"
-                                                    onChange={(e) => {
-                                                        handleChange(e);
-                                                        handleChan(e);
-                                                    }}
-                                                    checked={disabled}
+                                    <TextField
+                                        error={errors.phone && touched.phone}
+                                        fullWidth
+                                        label="Номер телефона"
+                                        margin="dense"
+                                        name="phone"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        variant="outlined"
+                                        helperText={
+                                            errors.phone && touched.phone
+                                                ? errors.phone
+                                                : null
+                                        }
+                                    />
+                                    <TextField
+                                        fullWidth
+                                        select
+                                        label="Продолжительность испытательного срока"
+                                        margin="dense"
+                                        name="probation"
+                                        onChange={handleChange}
+                                        variant="outlined"
+                                        defaultValue={'1 месяц'}
+                                        disabled={disabled}
+                                        displayEmpty
+                                    >
+                                        {dateProbation.map((option) => (
+                                            <MenuItem key={option.value} value={option.value}>
+                                                {option.label}
+                                            </MenuItem>
+                                        ))}
+                                    </TextField>
+                                    <FormControlLabel
+                                        margin="dense"
+                                        control={
+                                            <Checkbox
+                                                name="disabled"
+                                                onChange={(e) => {
+                                                    handleChange(e);
+                                                    handleChan(e);
+                                                }}
+                                                checked={disabled}
 
-                                                />}
-                                            label="Без испытательного срока"
-                                        />
+                                            />}
+                                        label="Без испытательного срока"
+                                    />
 
-                                        <TextField
-                                            error={errors.salary && touched.salary}
-                                            fullWidth
-                                            label="Зарплата"
-                                            margin="dense"
-                                            name="salary"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            variant="outlined"
-                                            type="number"
-                                            InputProps={{
-                                                startAdornment: (
-                                                    <InputAdornment position="start">
-                                                        $
-                                                    </InputAdornment>
-                                                ),
-                                            }}
-                                            helperText={
-                                                errors.salary && touched.salary
-                                                    ? errors.salary
-                                                    : null
-                                            }
-                                        />
-                                        <Query query={position_Query}>
-                                            {({loading, error, data}) =>
-                                            {
-                                                if (loading) return <div></div>
-                                                if (error) return <div>Error</div>
-                                                return (
-                                                    <TextField
-                                                        error={errors.position_id && touched.position_id}
-                                                        select
-                                                        fullWidth
-                                                        label="Должность"
-                                                        margin="dense"
-                                                        name="position_id"
-                                                        onChange={handleChange}
-                                                        onBlur={handleBlur}
-                                                        variant="outlined"
-                                                        helperText={
-                                                            errors.position_id && touched.position_id
-                                                                ? errors.position_id
-                                                                : null
-                                                        }
-                                                    >
+                                    <TextField
+                                        error={errors.salary && touched.salary}
+                                        fullWidth
+                                        label="Зарплата"
+                                        margin="dense"
+                                        name="salary"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        variant="outlined"
+                                        type="number"
+                                        InputProps={{
+                                            startAdornment: (
+                                                <InputAdornment position="start">
+                                                    $
+                                                </InputAdornment>
+                                            ),
+                                        }}
+                                        helperText={
+                                            errors.salary && touched.salary
+                                                ? errors.salary
+                                                : null
+                                        }
+                                    />
+                                    <Query query={position_Query}>
+                                        {({loading, error, data}) => {
+                                            if (loading) return <div></div>
+                                            if (error) return <div>Error</div>
+                                            return (
+                                                <TextField
+                                                    error={errors.position_id && touched.position_id}
+                                                    select
+                                                    fullWidth
+                                                    label="Должность"
+                                                    margin="dense"
+                                                    name="position_id"
+                                                    onChange={handleChange}
+                                                    onBlur={handleBlur}
+                                                    variant="outlined"
+                                                    helperText={
+                                                        errors.position_id && touched.position_id
+                                                            ? errors.position_id
+                                                            : null
+                                                    }
+                                                >
 
-                                                {data.allPositions.map((option) => (
-                                                        <MenuItem key={option.id} value={option.id}>
+                                                    {data.allPositions.map((option) => (
+                                                        <MenuItem key={option.PositionId} value={option.PositionId}>
                                                             {option.position}
                                                         </MenuItem>
                                                     ))}
-                                                    </TextField>
-                                                )
-                                            }}
-                                        </Query>
-                                    </Grid>
-                                </CardContent>
-                                <CardActions>
+                                                </TextField>
+                                            )
+                                        }}
+                                    </Query>
+                                </Grid>
+                            </CardContent>
+                            <CardActions>
 
-                                    <Button
-                                        color="primary"
-                                        variant="contained"
-                                        type="submit">
-                                        Добавить
-                                    </Button>
-                                </CardActions>
-                            </Form>
-                        )}
-                    </Formik>
-                }
-            </Mutation>
+                                <Button
+                                    color="primary"
+                                    variant="contained"
+                                    type="submit">
+                                    Добавить
+                                </Button>
+                            </CardActions>
+
+                        </Form>
+
+                    )}
+                </Formik>
+
+            </div>
         </Drawer>
     );
 };
