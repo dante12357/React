@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component,useState} from 'react';
 import UserTable from './components/UserTable/UserTable'
 
 import './userList.css'
 import UserToolbar from './components/UserToolbar';
 import {Query} from 'react-apollo';
+import {useQuery} from  '@apollo/react-hooks'
 import gql from 'graphql-tag';
 import { withRouter } from 'react-router'
 
@@ -23,34 +24,33 @@ const User_Query = gql`
     }
 `;
 
-// const [state, setState] = useState({
-//     query: "",
-//     columnToQuery: "name"
-// });
+
 // const lowerCaseQuery = state.query.toLowerCase();
 
 
 // const classes = useStyles()
-class UserList extends Component {
 
-    state = {
-        query: '',
-        columnToQuery: 'name'
-    };
+const UserList = () =>{
 
-    render() {
-        return (
+    const {loading, data, error } = useQuery(User_Query, {
+        pollInterval: 500,
+        fetchPolicy: "no-cache"
+    })
 
-            <Query query={User_Query}>
-                {({loading, error, data}) => {
-                    if (loading) return <div></div>
-                    if (error) return <div>Error</div>
+    const [state, setState] = useState({
+        query: "",
+        columnToQuery: "name"
+    });
+
+    if (loading) return <div></div>
+    if (error) return <div>Error</div>
+
                     return (
                         <div className="userList">
 
                             <UserToolbar
-                                onChange={e => this.setState({query: e.target.value})}
-                                value={this.state.query}
+                                onChange={e => setState({query: e.target.value})}
+                                value={state.query}
                             />
 
                             <div className="tableContent">
@@ -72,16 +72,14 @@ class UserList extends Component {
                                         prop: 'position'
                                     }
                                 ]} key={data.allUsers.id} data={data.allUsers.filter(x =>
-                                    x['name'].toLowerCase().includes(this.state.query.toLowerCase()))
+                                    x['name'].toLowerCase().includes(state.query.toLowerCase()))
                                 }
                                 />
                             </div>
                         </div>
-                    )
-                }}
-            </Query>
+
         );
-    }
+
 }
 
 export default UserList;

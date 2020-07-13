@@ -3,7 +3,22 @@
     //cursor: pointer;
 .headTableCell__button{
   text-transform: none;
+
 }
+
+    .ascending::after {
+      content: '';
+      display: inline-block;
+      margin-left: 1em;
+
+    }
+
+    .descending::after {
+      content: '☝️';
+      display: inline-block;
+      margin-left: 1em;
+    }
+
   }
 
 }

@@ -12,7 +12,7 @@ import gql from 'graphql-tag'
 import {Formik, Form} from 'formik'
 import * as yup from 'yup'
 import {toast} from 'react-toastify';
-import {position_Query} from "../../../../Position";
+import {getNumPosition_Query} from "../../../../Position";
 
 import './addPosition.css'
 
@@ -25,6 +25,7 @@ const POST_MUTATION = gql`
             position,
             positionCount
         }
+        
     }
 `;
 
@@ -62,13 +63,14 @@ const AddPosition = props => {
 
     const [addPosition, {data}] = useMutation(POST_MUTATION,
         {
-            update(store, {data: {addPosition}}) {
-                const {getNumPosition} = store.readQuery({query: position_Query});
-                store.writeQuery({
-                    query: position_Query,
-                    data: {getNumPosition: getNumPosition.concat([addPosition])},
-                });
-            },
+            // update(client, {data: {addPosition}}) {
+            //     const {getNumPosition} = client.readQuery({query: getNumPosition_Query});
+            //     client.writeQuery({
+            //         query: getNumPosition_Query,
+            //         data: {getNumPosition: getNumPosition.concat([addPosition])},
+            //     });
+            // },
+            refetchQueries: [{query: getNumPosition_Query }],
             onError: () =>{
                 errorPosition()
             },

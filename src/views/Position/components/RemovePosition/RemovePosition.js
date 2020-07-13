@@ -9,7 +9,7 @@ import {Query} from 'react-apollo'
 import {useMutation} from '@apollo/react-hooks';
 import gql from 'graphql-tag'
 import {toast} from 'react-toastify';
-import {position_Query} from "../../Position";
+import {getNumPosition_Query} from "../../Position";
 
 import DeleteIcon from '@material-ui/icons/Delete';
 
@@ -32,13 +32,15 @@ const RemovePosition = props => {
     const [state, setState] = useState({});
     const [removePosition, {data}] = useMutation(REMOVE_MUTATION,
         {
-            update(cache) {
-                const {getNumPosition} = cache.readQuery({query: position_Query});
-                cache.writeQuery({
-                    query: position_Query,
-                    data: {getNumPosition: getNumPosition.filter(e => e.PositionId !== id)},
-                })
-            },
+            // update(cache) {
+            //     const {getNumPosition} = cache.readQuery({query: getNumPosition_Query});
+            //     cache.writeQuery({
+            //         query: getNumPosition_Query,
+            //         data: {getNumPosition: getNumPosition.filter(e => e.PositionId !== id)},
+            //     })
+            // },
+            refetchQueries: [{query: getNumPosition_Query }],
+
             onError: () => {
                 errorPosition()
             },

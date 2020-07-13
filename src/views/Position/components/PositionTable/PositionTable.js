@@ -44,7 +44,6 @@ const PositionTable = props => {
 
          );
     }
-
     const requestSort = (key) => {
         let direction = 'ascending';
         if (
@@ -57,6 +56,13 @@ const PositionTable = props => {
         setSortedField({key, direction});
     };
 
+    const getClassNamesFor = (name) => {
+        if (!sortedField) {
+            return;
+        }
+        return sortedField.key === name ? sortedField.direction : undefined;
+    };
+
     const classes = useStyles();
     return (
 
@@ -66,7 +72,7 @@ const PositionTable = props => {
                     {header.map((head) =>
                         <TableCell key={head.name} className="headTableCell" size="medium"
                                    align="center">
-                            {head.prop=="position" || head.prop=="positionCount" ? <Button className="headTableCell__button" onClick={() => requestSort(head.prop)}>
+                            {head.prop=="position" || head.prop=="positionCount" ? <Button className={"headTableCell__button "} onClick={() => requestSort(head.prop)}>
                                 {head.name}
                             </Button> : <div> {head.name}</div>
                             }

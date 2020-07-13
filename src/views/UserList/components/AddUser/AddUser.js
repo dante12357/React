@@ -19,7 +19,7 @@ import {
 import ChevronRightIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
 import {Query} from 'react-apollo'
-import {useMutation} from '@apollo/react-hooks';
+import {useMutation, useQuery} from '@apollo/react-hooks';
 
 import gql from 'graphql-tag'
 import {Formik, Field, Form} from 'formik'
@@ -137,15 +137,17 @@ const AddUser = props => {
         progress: undefined,
     });
 
-    const [addUser, {data}] = useMutation(POST_MUTATION,
+    const [addUser, {}] = useMutation(POST_MUTATION,
         {
-            update(cache, {data: {addUser}}) {
-                const {allUsers} = cache.readQuery({query: User_Query});
-                cache.writeQuery({
-                    query: User_Query,
-                    data: {allUsers: allUsers.concat([addUser])},
-                });
-            },
+            // update(cache, {data: {addUser}}) {
+            //     const {allUsers} = cache.readQuery({query: User_Query});
+            //     cache.writeQuery({
+            //         query: User_Query,
+            //         data: {allUsers: allUsers.concat([addUser])},
+            //     });
+            // },
+            refetchQueries: [{query: User_Query }],
+
             onError: () => {
                 errorToast()
             },
@@ -154,7 +156,12 @@ const AddUser = props => {
             },
 
         });
-
+    const {loading, error,data} = useQuery(position_Query, {
+        pollInterval: 500,
+        fetchPolicy: "no-cache"
+    })
+    if (loading) return <div></div>
+    if (error) return <div>Error</div>
     return (
 
         <Drawer
@@ -342,11 +349,7 @@ const AddUser = props => {
                                                 : null
                                         }
                                     />
-                                    <Query query={position_Query}>
-                                        {({loading, error, data}) => {
-                                            if (loading) return <div></div>
-                                            if (error) return <div>Error</div>
-                                            return (
+
                                                 <TextField
                                                     error={errors.position_id && touched.position_id}
                                                     select
@@ -370,9 +373,7 @@ const AddUser = props => {
                                                         </MenuItem>
                                                     ))}
                                                 </TextField>
-                                            )
-                                        }}
-                                    </Query>
+
                                 </Grid>
                             </CardContent>
                             <CardActions>
