@@ -1,16 +1,19 @@
 @charset "UTF-8";
-.positionTable .headTableCell .headTableCell__button {
-  text-transform: none;
+.positionTable .headTableCell span {
+  cursor: pointer;
+  position: relative;
 }
 .positionTable .headTableCell .ascending::after {
-  content: "";
+  content: "↓";
   display: inline-block;
-  margin-left: 1em;
+  position: absolute;
+  right: -11px;
 }
 .positionTable .headTableCell .descending::after {
-  content: "☝️";
+  content: "↑️";
   display: inline-block;
-  margin-left: 1em;
+  position: absolute;
+  right: -11px;
 }
 
 /*# sourceMappingURL=positionTable.css.map */

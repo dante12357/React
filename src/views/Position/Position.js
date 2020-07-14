@@ -44,8 +44,8 @@ const Position = props => {
         }
     );
     const {loading, error, data} = useQuery(getNumPosition_Query, {
-        pollInterval: 500,
-        fetchPolicy: "no-cache",
+        // pollInterval: 500,
+        fetchPolicy: "network-only"
         }
     )
 

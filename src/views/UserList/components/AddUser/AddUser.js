@@ -139,9 +139,9 @@ const AddUser = props => {
 
     const [addUser, {}] = useMutation(POST_MUTATION,
         {
-            // update(cache, {data: {addUser}}) {
-            //     const {allUsers} = cache.readQuery({query: User_Query});
-            //     cache.writeQuery({
+            // update(store, {data: {addUser}}) {
+            //     const {allUsers} = store.readQuery({query: User_Query});
+            //     store.writeQuery({
             //         query: User_Query,
             //         data: {allUsers: allUsers.concat([addUser])},
             //     });
@@ -157,8 +157,8 @@ const AddUser = props => {
 
         });
     const {loading, error,data} = useQuery(position_Query, {
-        pollInterval: 500,
-        fetchPolicy: "no-cache"
+        // pollInterval: 500,
+        fetchPolicy: "network-only"
     })
     if (loading) return <div></div>
     if (error) return <div>Error</div>

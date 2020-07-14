@@ -7,3 +7,4 @@ xdebug.ini
 webpack.config.js
 vendor
 node_modules
+.idea

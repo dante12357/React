@@ -1,7 +1,6 @@
 <?php
 
 require_once(__DIR__ . "/../Db.php");
-require_once(__DIR__ . "/../Types.php");
 
 use GraphQL\Type\Definition\ObjectType;
 

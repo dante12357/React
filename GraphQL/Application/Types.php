@@ -5,7 +5,6 @@ include_once "Type/UserType.php";
 include_once "Type/PositionType.php";
 include_once "Type/MutationType.php";
 include_once "Type/InputUserType.php";
-include_once "Type/NumPositionType.php";
 
 use GraphQL\Type\Definition\Type;
 

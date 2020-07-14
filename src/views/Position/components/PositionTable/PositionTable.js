@@ -72,9 +72,9 @@ const PositionTable = props => {
                     {header.map((head) =>
                         <TableCell key={head.name} className="headTableCell" size="medium"
                                    align="center">
-                            {head.prop=="position" || head.prop=="positionCount" ? <Button className={"headTableCell__button "} onClick={() => requestSort(head.prop)}>
+                            {head.prop=="position" || head.prop=="positionCount" ? <span className={getClassNamesFor((head.prop))}  onClick={() => requestSort(head.prop)}>
                                 {head.name}
-                            </Button> : <div> {head.name}</div>
+                            </span> : <div> {head.name}</div>
                             }
                         </TableCell>
                     )}

@@ -51,7 +51,6 @@ const SettingsNav = props => {
                     component={RouterLink}
                     to={"/settings" + page.href}
                     divider
-
                 >
 
                     <ListItemText

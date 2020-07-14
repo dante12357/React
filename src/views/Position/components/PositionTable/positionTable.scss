@@ -1,24 +1,28 @@
 .positionTable {
   .headTableCell {
     //cursor: pointer;
-.headTableCell__button{
-  text-transform: none;
-
-}
+    //.headTableCell__button{
+    //  cursor: pointer;
+    //  //text-transform: none;
+    //
+    //}
+    span {
+      cursor: pointer;
+      position: relative;
+    }
 
     .ascending::after {
-      content: '';
+      content: '↓';
       display: inline-block;
-      margin-left: 1em;
-
+      position: absolute;
+      right: -11px;
     }
 
     .descending::after {
-      content: '☝️';
+      content: '↑️';
       display: inline-block;
-      margin-left: 1em;
-    }
-
+      position: absolute;
+      right: -11px;    }
   }
 
 }

@@ -1,7 +1,6 @@
 <?php
 
 require_once(__DIR__ . "/../Db.php");
-//include_once "../Types.php";
 
 use GraphQL\Type\Definition\ObjectType;
 
@@ -20,33 +19,57 @@ class QueryType extends ObjectType
                             'id' => Types::int()
                         ],
                         'resolve' => function ($root, $args) {
-                            return Db::selectOne("SELECT * FROM userList WHERE id = {$args['id']}");
+                            return QueryType::userSelect($root, $args);
                         }
                     ],
                     'allUsers' => [
                         'type' => Types::listOf(Types::user()),
                         'description' => 'Список пользователей',
                         'resolve' => function () {
-                            return Db::select('SELECT * FROM userList INNER JOIN `positions` ON position_id = positions.PositionId ORDER BY userList.id');
+                            return QueryType::allUsersSelect();
                         }
                     ],
                     'allPositions' => [
                         'type' => Types::listOf(Types::position()),
                         'description' => 'Список должностей',
                         'resolve' => function () {
-                            return Db::select('SELECT * FROM `positions`');
+                            return QueryType::allPositionsSelect();
                         }
                     ],
                     'getNumPosition' => [
                         'type' => Types::listOf(Types::position()),
                         'description' => 'Количество людей на должности',
                         'resolve' => function () {
-                            return Db::select('SELECT  position, PositionId, count( position_id) AS positionCount FROM userList RIGHT JOIN `positions` ON position_id = Positionid  group by  PositionId, position');
+                            return QueryType::getNumPositionSelect();
                         }
                     ],
                 ];
             }
         ];
         parent::__construct($config);
+    }
+
+    public static function userSelect($root, $args)
+    {
+        return Db::selectOne("SELECT * FROM userList WHERE id = {$args['id']}");
+
+    }
+
+    public static function allUsersSelect()
+    {
+        return Db::select('SELECT * FROM userList INNER JOIN `positions` ON position_id = positions.PositionId ORDER BY userList.id');
+
+    }
+
+    public static function allPositionsSelect()
+    {
+        return Db::select('SELECT * FROM `positions`');
+
+    }
+
+    public static function getNumPositionSelect()
+    {
+        return Db::select('SELECT  position, PositionId, count( position_id) AS positionCount FROM userList RIGHT JOIN `positions` ON position_id = Positionid  group by  PositionId, position');
+
     }
 }

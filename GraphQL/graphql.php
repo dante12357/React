@@ -4,6 +4,7 @@
 //header('Access-Control-Allow-Headers: content-type');
 require_once __DIR__ . '/../vendor/autoload.php';
 
+require_once __DIR__ .'/loader.php';
 include_once "Application/Db.php";
 include_once "Application/Types.php";
 
@@ -11,6 +12,7 @@ include_once "Application/Types.php";
 //use Application\Types;
 use GraphQL\GraphQL;
 use GraphQL\Type\Schema;
+spl_autoload_register("Types");
 
 try {
     $config=[

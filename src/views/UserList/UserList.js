@@ -33,8 +33,8 @@ const User_Query = gql`
 const UserList = () =>{
 
     const {loading, data, error } = useQuery(User_Query, {
-        pollInterval: 500,
-        fetchPolicy: "no-cache"
+        // pollInterval: 500,
+        fetchPolicy: "network-only"
     })
 
     const [state, setState] = useState({
@@ -72,7 +72,7 @@ const UserList = () =>{
                                         prop: 'position'
                                     }
                                 ]} key={data.allUsers.id} data={data.allUsers.filter(x =>
-                                    x['name'].toLowerCase().includes(state.query.toLowerCase()))
+                                    x['name'].toLowerCase().includes(state.query.toLowerCase()) || x['lastName'].toLowerCase().includes(state.query.toLowerCase()))
                                 }
                                 />
                             </div>

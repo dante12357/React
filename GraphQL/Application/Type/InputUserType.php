@@ -1,7 +1,4 @@
 <?php
-require_once(__DIR__ . "/../Types.php");
-
-
 use GraphQL\Type\Definition\InputObjectType;
 
 
