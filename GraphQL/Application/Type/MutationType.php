@@ -12,15 +12,25 @@ class MutationType extends ObjectType
         $config = [
             'fields' => function () {
                 return [
-                    'changeUserEmail' => [
+                    'changeUser' => [
                         'type' => Types::user(),
-                        'description' => 'Изменение E-mail пользователя',
+                        'description' => 'Изменение сотрудника',
                         'args' => [
                             'id' => Types::int(),
-                            'email' => Types::string()
+                            'name' => Types::string(),
+                            'last_name' => Types::string(),
+                            'birthday' => Types::string(),
+                            'email' => Types::string(),
+                            'date_employment' => Types::string(),
+                            'phone' => Types::string(),
+                            'probation' => Types::string(),
+                            'salary' => Types::int(),
+                            'position_id' => Types::int(),
+                            'position' => Types::string(),
+                            'avatarUrl' => Types::string(),
                         ],
                         'resolve' => function ($root, $args) {
-                            return MutationType::changeUserEmailResolve($root, $args);
+                            return MutationType::changeUserResolve($root, $args);
                         }
                     ],
                     'addUser' => [
@@ -28,16 +38,16 @@ class MutationType extends ObjectType
                         'description' => 'Добавление пользователя',
                         'args' => [
                             'name' => Types::string(),
-                            'lastName' => Types::string(),
+                            'last_name' => Types::string(),
                             'birthday' => Types::string(),
                             'email' => Types::string(),
-                            'dateEmployment' => Types::string(),
+                            'date_employment' => Types::string(),
                             'phone' => Types::string(),
                             'probation' => Types::string(),
                             'salary' => Types::int(),
                             'position_id' => Types::int(),
                             'position' => Types::string(),
-                            'avatarUrl' => Types::string(),
+                            'avatar_url' => Types::string(),
                         ],
                         'resolve' => function ($root, $args) {
                             return MutationType::addUserResolve($root, $args);
@@ -73,24 +83,36 @@ class MutationType extends ObjectType
         parent::__construct($config);
     }
 
-    public static function changeUserEmailResolve($root, $args)
+    public static function changeUserResolve($root, $args)
     {
-        Db::update("UPDATE userList SET `email` = '{$args['email']}' WHERE `id` = {$args['id']}");
-        $user = Db::selectOne("SELECT * from users WHERE id = {$args['id']}");
-        return $user;
+        $args['birthday'] = new  DateTime($args['birthday']);
+        $args['birthday'] = $args['birthday']->format('Y-m-d');
+        $args['date_employment'] = new DateTime($args['date_employment']);
+        $args['date_employment'] = $args['date_employment']->format('Y-m-d');
+        Db::update("UPDATE userList SET 
+            `name` = '{$args['name']}',
+            `last_name` = '{$args['last_name']}',
+            `birthday` = '{$args['birthday']}',
+            `email` = '{$args['email']}',
+            `date_employment` = '{$args['date_employment']}',
+            `phone` = '{$args['phone']}',
+            `probation` = '{$args['probation']}',
+            `salary` = '{$args['salary']}',
+            `position_id` = '{$args['position_id']}' WHERE `id` = {$args['id']}");
+        return Db::selectOne("SELECT * from userList WHERE id = {$args['id']}");
     }
 
     public static function addUserResolve($root, $args)
     {
         $args['birthday'] = new  DateTime($args['birthday']);
         $args['birthday'] = $args['birthday']->format('Y-m-d');
-        $args['dateEmployment'] = new DateTime($args['dateEmployment']);
-        $args['dateEmployment'] = $args['dateEmployment']->format('Y-m-d');
+        $args['date_employment'] = new DateTime($args['date_employment']);
+        $args['date_employment'] = $args['date_employment']->format('Y-m-d');
 
-        $userId = Db::insert("INSERT INTO userList (`name`,`lastName`,`birthday`,`email`,
-                            `dateEmployment`,`phone`,`probation`,`salary`,`position_id`) VALUES 
-                        ('{$args['name']}','{$args['lastName']}','{$args['birthday']}','{$args['email']}',
-                        '{$args['dateEmployment']}','{$args['phone']}','{$args['probation']}','{$args['salary']}',
+        $userId = Db::insert("INSERT INTO userList (`name`,`last_name`,`birthday`,`email`,
+                            `date_employment`,`phone`,`probation`,`salary`,`position_id`) VALUES 
+                        ('{$args['name']}','{$args['last_name']}','{$args['birthday']}','{$args['email']}',
+                        '{$args['date_employment']}','{$args['phone']}','{$args['probation']}','{$args['salary']}',
                         '{$args['position_id']}')");
         return Db::selectOne("SELECT * from userList INNER JOIN `positions` ON position_id = positions.PositionId WHERE userList.id = $userId ");
     }
@@ -99,7 +121,7 @@ class MutationType extends ObjectType
     {
         $positionId = Db::insert("INSERT INTO `positions`(`position`) VALUES ('{$args['position']}')");
 //        return Db::selectOne("SELECT *, count( position_id) AS positionCount from `positions` WHERE PositionId = $positionId");
-        return Db::select('SELECT  position, PositionId, count( position_id) AS positionCount FROM userList RIGHT JOIN `positions` ON position_id = Positionid WHERE PositionId = '.$positionId.' group by  PositionId, position');
+        return Db::select('SELECT  position, PositionId, count(position_id) AS positionCount FROM userList RIGHT JOIN `positions` ON position_id = Positionid WHERE PositionId = ' . $positionId . ' group by  PositionId, position');
 
     }
 

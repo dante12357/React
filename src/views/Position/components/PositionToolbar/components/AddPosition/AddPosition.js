@@ -15,6 +15,9 @@ import {toast} from 'react-toastify';
 import {getNumPosition_Query} from "../../../../Position";
 
 import './addPosition.css'
+import {useTranslation} from "react-i18next";
+import ErrorToast from "../../../../../../components/Toast/ErrorToast";
+import SuccessToast from "../../../../../../components/Toast/SuccessToast";
 
 const useStyles = makeStyles(() => ({}));
 
@@ -31,35 +34,17 @@ const POST_MUTATION = gql`
 
 const ReviewSchema = yup.object().shape(
     {
-        position: yup.string().required("Введите должность"),
+        position: yup.string().required("Enter position"),
     });
 
 const AddPosition = props => {
     const {} = props;
     const classes = useStyles();
+    const { t, i18n } = useTranslation('translation');
 
     const [state, setState] = useState({});
 
     const {} = state;
-
-    const success = () => toast.success('Должность успешно добавлена', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-    });
-    const errorPosition = () => toast.error('Такая должность уже существует', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-    });
 
     const [addPosition, {data}] = useMutation(POST_MUTATION,
         {
@@ -72,10 +57,10 @@ const AddPosition = props => {
             // },
             refetchQueries: [{query: getNumPosition_Query }],
             onError: () =>{
-                errorPosition()
+                ErrorToast('Such a position already exists')
             },
             onCompleted: () => {
-                success()
+                SuccessToast('Position successfully added')
             },
         });
     return (
@@ -101,7 +86,7 @@ const AddPosition = props => {
                         className="addPosition__input"
                         autoComplete="off"
                         error={errors.position}
-                        label="Добавить Должность"
+                        label={t("Add position")}
                         margin="dense"
                         name="position"
                         onChange={handleChange}
@@ -117,7 +102,7 @@ const AddPosition = props => {
                         variant="contained"
                         type="submit"
                     >
-                        Добавить
+                        {t('Add')}
                     </Button>
                 </Form>
             )}

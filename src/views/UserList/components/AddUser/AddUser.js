@@ -27,31 +27,34 @@ import * as yup from 'yup'
 import {toast} from 'react-toastify';
 import {DatePickerField} from "./components";
 import {User_Query} from "../../UserList";
+import {useTranslation} from "react-i18next";
+import ErrorToast from "../../../../components/Toast/ErrorToast";
+import SuccessToast from "../../../../components/Toast/SuccessToast";
 
 const useStyles = makeStyles(() => ({
     drawer: {
         width: 540,
-    }
+    },
 }));
 
 const POST_MUTATION = gql`
     mutation PostMutation( $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
         $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position_id: Int!,  $avatarUrl: String!) {
 
-        addUser(name: $name, lastName: $lastName, birthday: $birthday, email: $email, dateEmployment: $dateEmployment,
-            phone: $phone, probation: $probation, salary: $salary, position_id: $position_id, avatarUrl: $avatarUrl) {
+        addUser(name: $name, last_name: $lastName, birthday: $birthday, email: $email, date_employment: $dateEmployment,
+            phone: $phone, probation: $probation, salary: $salary, position_id: $position_id, avatar_url: $avatarUrl) {
             id,
             name,
-            lastName,
+            last_name,
             birthday,
             email,
-            dateEmployment,
+            date_employment,
             phone,
             probation,
             salary,
             position,
             position_id,
-            avatarUrl
+            avatar_url
         }
     }
 `;
@@ -65,31 +68,32 @@ const position_Query = gql`
 `;
 // const phoneRegExp =/^([0]([.][0-9]+)?|[1-9]([0-9]+)?([.][0-9]+)?)$/;
 
-const ReviewSchema = yup.object().shape(
-    {
-        name: yup.string().required("Введите имя "),
-        lastName: yup.string().required("Введите фамилию"),
-        // birthday: yup.string().required("Выберите дату дня рождения"),
-        email: yup.string().required("Введите email").email("Неправильный формат email"),
-        //dateEmployment: yup.date().required("Выберите дату приёма на работу"),
-        phone: yup.string().required("Введите номер")
-        // .matches(phoneRegExp,"Неправильно написан номер")
-        ,
-        //probation: yup.string().oneOf(['1 месяц', '2 месяца', '3 месяца', '4 месяца'], "Выберите один из сроков").required(),
-        salary: yup.number().min(0, "Зарплата отрицательная, а ВЫ гений").required("Введите зарплату"),
-        position_id: yup.string().required("Добавьте должность"),
-
-    });
 
 const AddUser = props => {
     const {open, onClose, closeForm} = props;
     const classes = useStyles();
+    const { t, i18n } = useTranslation('translation');
+
+    const ReviewSchema = yup.object().shape(
+        {
+            name: yup.string().required(t("Enter name")),
+            lastName: yup.string().required(t("Enter last name")),
+            // birthday: yup.string().required("Выберите дату дня рождения"),
+            email: yup.string().required(t("Enter email")).email(t("Incorrect email format")),
+            //dateEmployment: yup.date().required("Выберите дату приёма на работу"),
+            phone: yup.string().required(t("Enter number"))
+            // .matches(phoneRegExp,"Неправильно написан номер")
+            ,
+            //probation: yup.string().oneOf(['1 месяц', '2 месяца', '3 месяца', '4 месяца'], "Выберите один из сроков").required(),
+            salary: yup.number().min(0, t("The salary is negative, and YOU are a genius")).required(t("Enter salary")),
+            position_id: yup.string().required(t("Select position")),
+
+        });
 
     const [state, setState] = useState({
         disabled: false,
-        avatarUrl: ''
+        avatar_url: ''
     });
-
     const {disabled} = state;
 
     const handleChan = event => {
@@ -101,41 +105,22 @@ const AddUser = props => {
 
     const dateProbation = [
         {
-            value: '1 месяц',
+            value: '1',
             label: '1 месяц',
         },
         {
-            value: '2 месяца',
+            value: '2',
             label: '2 месяца',
         },
         {
-            value: '3 месяца',
+            value: '3',
             label: '3 месяца',
         },
         {
-            value: '4 месяца',
+            value: '4',
             label: '4 месяца',
         },
     ];
-
-    const success = () => toast.success('Сотрудник успешно добавлен', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-    });
-    const errorToast = () => toast.error('Ошибка', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-    });
 
     const [addUser, {}] = useMutation(POST_MUTATION,
         {
@@ -146,21 +131,21 @@ const AddUser = props => {
             //         data: {allUsers: allUsers.concat([addUser])},
             //     });
             // },
-            refetchQueries: [{query: User_Query }],
+            refetchQueries: [{query: User_Query}],
 
             onError: () => {
-                errorToast()
+                ErrorToast('Error adding employee')
             },
             onCompleted: () => {
-                success()
+                   SuccessToast('Employee added successfully')
             },
 
         });
-    const {loading, error,data} = useQuery(position_Query, {
+    const {loading, error, data} = useQuery(position_Query, {
         // pollInterval: 500,
         fetchPolicy: "network-only"
     })
-    if (loading) return <div></div>
+    if (loading) return <div>loading</div>
     if (error) return <div>Error</div>
     return (
 
@@ -181,7 +166,7 @@ const AddUser = props => {
                         email: '',
                         dateEmployment: new Date(),
                         phone: '',
-                        probation: '1 месяц',
+                        probation: '1',
                         salary: '',
                         position: '',
                         avatarUrl: '',
@@ -190,10 +175,9 @@ const AddUser = props => {
                     validationSchema={ReviewSchema}
                     onSubmit={(values, actions) => {
 
-                        values['probation'] = disabled ? "Нет испытательного срока" : values['probation'];
+                        values['probation'] = disabled ? "0" : values['probation'];
                         addUser({
                             variables: values,
-
                         });
 
                         closeForm(false)
@@ -208,8 +192,9 @@ const AddUser = props => {
                                 <ChevronRightIcon/>
                             </IconButton>
                             <CardHeader
-                                subheader="Добавьте нового сотрудника"
-                                title="Добавление сотрудника"
+
+                                subheader={t("Add new employee")}
+                                title={t("Adding an employee")}
                             />
                             <Divider/>
 
@@ -220,7 +205,7 @@ const AddUser = props => {
                                         autoComplete="off"
                                         error={errors.name && touched.name}
                                         fullWidth
-                                        label="Имя"
+                                        label={t("Name")}
                                         margin="dense"
                                         name="name"
                                         onChange={handleChange}
@@ -236,7 +221,7 @@ const AddUser = props => {
                                     <TextField
                                         error={errors.lastName && touched.lastName}
                                         fullWidth
-                                        label="Фамилия"
+                                        label={t("Last name")}
                                         margin="dense"
                                         name="lastName"
                                         onChange={handleChange}
@@ -251,8 +236,7 @@ const AddUser = props => {
                                     <Field
                                         name="birthday"
                                         component={DatePickerField}
-                                        label="День рождения"
-
+                                        label={t("Birthday")}
 
                                     />
                                     <TextField
@@ -274,14 +258,14 @@ const AddUser = props => {
                                     <Field
                                         name="dateEmployment"
                                         component={DatePickerField}
-                                        label="Дата приёма на работу"
+                                        label={t("Employment date")}
 
                                     />
 
                                     <TextField
                                         error={errors.phone && touched.phone}
                                         fullWidth
-                                        label="Номер телефона"
+                                        label={t("Phone")}
                                         margin="dense"
                                         name="phone"
                                         onChange={handleChange}
@@ -296,12 +280,12 @@ const AddUser = props => {
                                     <TextField
                                         fullWidth
                                         select
-                                        label="Продолжительность испытательного срока"
+                                        label={t("Trial period")}
                                         margin="dense"
                                         name="probation"
                                         onChange={handleChange}
                                         variant="outlined"
-                                        defaultValue={'1 месяц'}
+                                        defaultValue={'1'}
                                         disabled={disabled}
                                         displayEmpty
                                     >
@@ -323,13 +307,13 @@ const AddUser = props => {
                                                 checked={disabled}
 
                                             />}
-                                        label="Без испытательного срока"
+                                        label={t("No probationary period")}
                                     />
 
                                     <TextField
                                         error={errors.salary && touched.salary}
                                         fullWidth
-                                        label="Зарплата"
+                                        label={t("Salary")}
                                         margin="dense"
                                         name="salary"
                                         onChange={handleChange}
@@ -350,29 +334,29 @@ const AddUser = props => {
                                         }
                                     />
 
-                                                <TextField
-                                                    error={errors.position_id && touched.position_id}
-                                                    select
-                                                    fullWidth
-                                                    label="Должность"
-                                                    margin="dense"
-                                                    name="position_id"
-                                                    onChange={handleChange}
-                                                    onBlur={handleBlur}
-                                                    variant="outlined"
-                                                    helperText={
-                                                        errors.position_id && touched.position_id
-                                                            ? errors.position_id
-                                                            : null
-                                                    }
-                                                >
+                                    <TextField
+                                        error={errors.position_id && touched.position_id}
+                                        select
+                                        fullWidth
+                                        label={t("Position")}
+                                        margin="dense"
+                                        name="position_id"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        variant="outlined"
+                                        helperText={
+                                            errors.position_id && touched.position_id
+                                                ? errors.position_id
+                                                : null
+                                        }
+                                    >
 
-                                                    {data.allPositions.map((option) => (
-                                                        <MenuItem key={option.PositionId} value={option.PositionId}>
-                                                            {option.position}
-                                                        </MenuItem>
-                                                    ))}
-                                                </TextField>
+                                        {data.allPositions.map((option) => (
+                                            <MenuItem key={option.PositionId} value={option.PositionId}>
+                                                {option.position}
+                                            </MenuItem>
+                                        ))}
+                                    </TextField>
 
                                 </Grid>
                             </CardContent>
@@ -382,7 +366,7 @@ const AddUser = props => {
                                     color="primary"
                                     variant="contained"
                                     type="submit">
-                                    Добавить
+                                    {t('Add')}
                                 </Button>
                             </CardActions>
 

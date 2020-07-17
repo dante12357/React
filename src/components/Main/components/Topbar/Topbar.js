@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { AppBar, Toolbar, Badge, Hidden, IconButton } from '@material-ui/core';
+import {AppBar, Toolbar, Badge, Hidden, IconButton, ListItem} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import InputIcon from '@material-ui/icons/Input';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() => ({
   appBar: {
@@ -25,7 +26,11 @@ const Topbar = props => {
   const {  onSidebarOpen, ...rest } = props;
   const [notifications] = useState([]);
   const classes = useStyles();
+  const { t, i18n } = useTranslation('translation');
 
+  const changeLanguage= (lng) =>{
+    i18n.changeLanguage(lng)
+  }
   return (
     <AppBar
       {...rest}
@@ -50,6 +55,8 @@ const Topbar = props => {
             </defs>
           </svg>
         </RouterLink>
+        <button onClick={()=>changeLanguage('en')}>en</button>
+        <button onClick={()=>changeLanguage('ru')}>ru</button>
         <div className={classes.flexGrow} />
         <Hidden mdDown>
           <IconButton color="inherit">

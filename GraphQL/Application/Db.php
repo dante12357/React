@@ -1,5 +1,6 @@
 <?php
 
+
 class Db
 {
     private static $pdo;
@@ -64,7 +65,7 @@ class Db
     public static function update($query)
     {
         $statement = self::$pdo->query($query);
-        $statement->execute();
+//        $statement->execute();
         return $statement->rowCount();
     }
 

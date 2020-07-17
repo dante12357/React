@@ -1,0 +1,11 @@
+.userToolbar .row {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  margin-top: 8px;
+}
+.userToolbar .row .spacer {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=userToolbar.css.map */

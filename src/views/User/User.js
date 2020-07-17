@@ -1,56 +1,50 @@
 import React, {Component} from 'react';
 import './user.css'
 import {Query} from 'react-apollo';
+import {useQuery} from "@apollo/react-hooks";
 import gql from 'graphql-tag';
+import PropTypes from 'prop-types';
+import {UserToolbar} from "./components";
+
+// import UserToolbar from './components'
+const User_Query = gql`
+    query ($id : Int!){
+        user(id: $id){
+            id,
+            name,
+            last_name,
+            email,
+            phone,
+            birthday,
+            date_employment,
+            probation,
+            salary,
+        }
+    }`
+
+// const classes = useStyles()
 // const [state, setState] = useState({
 //     query: "",
 //     columnToQuery: "name"
 // });
 // const lowerCaseQuery = state.query.toLowerCase();
-import PropTypes from 'prop-types';
-
-
-// const classes = useStyles()
-
 const User = props => {
     const {match: {params: {id}}} = props;
 
+    const {data, loading, error} = useQuery(User_Query, {
+        variables: {id: +id},
+    })
 
-    const User_Query = gql`{
-        user(id:${id}){
-            id,
-            name,
-            lastName,
-            email,
-            dateEmployment
-        }
-
-    }`
-
+    if (loading) return <div>loading</div>
+    if (error) return <div>Error</div>
     return (
         <div className="user">
-            <Query query={User_Query}>
-                {({loading, error, data}) => {
+            <h3>{data.user.name} {data.user.last_name}</h3>
 
-                    if (loading) return <div></div>
-                    if (error) return <div>Error</div>
-                    return (
-                        <div>
-                            <h2>
-                                {data.user.id}
-                            </h2>
-                            <h2>
-                                {data.user.name}
-                            </h2>
-                            <h2>
-                                {data.user.lastName}
-                            </h2>
-                        </div>
+            <UserToolbar
+                data={data}
+            />
 
-                    )
-                }
-                }
-            </Query>
         </div>
     );
 

@@ -1,0 +1,11 @@
+.userToolbar{
+  .row{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    margin-top: 8px;
+    .spacer {
+      flex-grow: 1;
+    }
+  }
+}

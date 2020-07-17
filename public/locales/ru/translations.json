@@ -1,0 +1,50 @@
+{
+    "List of employees": "Список сотрудников",
+    "Settings": "Настройки",
+
+    "Name": "Имя",
+    "Phone": "Номер телефона",
+    "Email": "Email",
+    "Position": "Должность",
+    "Last name": "Фамилия",
+
+    "Add employee": "Добавить сотрудника",
+
+    "Enter name": "Введите имя",
+    "Enter last name": "Введите фамилию",
+    "Enter email": "Введите email",
+    "Incorrect email format": "Неправильный формат email",
+    "Enter number": "Введите номер телефона",
+    "Enter salary": "Введите зарплату",
+    "The salary is negative, and YOU are a genius": "Зарплата отрицательная, а ВЫ гений",
+    "Select position": "Выберите должность",
+
+    "Employee added successfully": "Сотрудник успешно добавлен",
+    "Error adding employee": "Ошибка добавления сотрудника",
+    "Add new employee": "Добавьте нового сотрудника",
+    "Adding an employee": "Добавление сотрудника",
+    "Birthday": "День рождения",
+    "Employment date": "Дата приема на работу",
+    "Trial period": "Испытательный срок",
+    "No probationary period": "Без испытательного срока",
+    "Salary": "Зарплата",
+    "Add": "Добавить",
+
+    "Positions": "Должности",
+    "Number of employees with a position": "Количество сотрудников с должностью",
+    "Remove position": "Удалить должность",
+
+    "Enter position": "Введите должность",
+    "Position successfully added": "Должность успешно добавлена",
+    "Such a position already exists": "Такая позиция уже существует",
+    "Add position": "Добавить должность",
+
+    "Details": "Детали",
+    "Employee Information": "Информация о сотруднике",
+    "Edit": "Изменить",
+
+    "Employee editing": "Изменить сотрудника",
+    "No trial period": "Без испытательного срока"
+
+
+}

@@ -12,12 +12,14 @@ import {makeStyles} from '@material-ui/styles';
 import PropTypes from 'prop-types';
 import RemovePosition from "../RemovePosition";
 import "./positionTable.css"
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles(() => ({}));
 
 
 const PositionTable = props => {
     const {data, header} = props;
+    const { t, i18n } = useTranslation('translation');
 
     const [sortedField, setSortedField] = React.useState(null);
 
@@ -73,8 +75,8 @@ const PositionTable = props => {
                         <TableCell key={head.name} className="headTableCell" size="medium"
                                    align="center">
                             {head.prop=="position" || head.prop=="positionCount" ? <span className={getClassNamesFor((head.prop))}  onClick={() => requestSort(head.prop)}>
-                                {head.name}
-                            </span> : <div> {head.name}</div>
+                                {t(head.name)}
+                            </span> : <div> {t(head.name)}</div>
                             }
                         </TableCell>
                     )}
@@ -98,8 +100,6 @@ const PositionTable = props => {
                         </TableCell>
                     </TableRow>
                 )}
-
-
             </TableBody>
 
         </Table>

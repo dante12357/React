@@ -1,0 +1,52 @@
+{
+    "List of employees": "List of employees",
+  "Settings": "Settings",
+
+  "Name": "Name",
+  "Phone": "Phone",
+  "Email": "Email",
+  "Position": "Position",
+  "Last name": "Last name",
+
+  "Add employee": "Add employee",
+
+  "Enter name": "Enter name",
+  "Enter last name": "Enter last name",
+  "Enter email": "Enter email",
+  "Incorrect email format": "Incorrect email format",
+  "Enter number": "Enter number",
+  "Enter salary": "Enter salary",
+  "The salary is negative, and YOU are a genius": "The salary is negative, and YOU are a genius",
+  "Select position": "Select position",
+
+  "Employee added successfully": "Employee added successfully",
+  "Error adding employee": "Error adding employee",
+  "Add new employee": "Add new employee",
+  "Adding an employee": "Adding an employee",
+  "Birthday": "Birthday",
+  "Employment date": "Employment date",
+  "Trial period": "Trial period",
+  "No probationary period": "No probationary period",
+  "Salary": "Salary",
+  "Add": "Add",
+
+  "Positions": "Positions",
+  "Number of employees with a position": "Number of employees with a position",
+  "Remove position": "Remove position",
+
+  "Enter position": "Enter position",
+  "Position successfully added": "Position successfully added",
+  "Such a position already exists": "Such a position already exists",
+  "Add position": "Add position",
+
+  "Details": "Details",
+  "Employee Information": "Employee Information",
+  "Edit": "Edit",
+
+  "Employee editing": "Employee editing",
+  "No trial period": "No trial period"
+
+
+
+
+}

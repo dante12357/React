@@ -13,7 +13,7 @@ class InputUserType extends InputObjectType{
                         'type' => Types::string(),
                         'description' => 'Имя пользователя'
                     ],
-                    'lastName' => [
+                    'last_name' => [
                         'type' => Types::string(),
                         'description' => 'Имя пользователя'
                     ],

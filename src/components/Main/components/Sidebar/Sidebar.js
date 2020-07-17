@@ -28,12 +28,12 @@ const Sidebar = props => {
 
   const pages = [
     {
-      title: 'Список сотрудников',
+      title: 'List of employees',
       href: '/users',
       icon: <PeopleIcon />
     },
     {
-      title: 'Настройки',
+      title: 'Settings',
       href: '/settings',
       icon: <SettingsIcon />
     },

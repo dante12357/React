@@ -9,7 +9,10 @@ import {
     User as UserView,
     Settings as SettingsView,
     Position as PositionView,
+    UserEdit as UserEditView,
+
 } from './views';
+import UserEdit from "./views/UserEdit";
 
 const Routes = () => {
     return (
@@ -43,6 +46,12 @@ const Routes = () => {
                 exact
                 layout={MainLayout}
                 path="/settings/position"
+            />
+            <RouteWithLayout
+                component={UserEditView}
+                exact
+                layout={MainLayout}
+                path="/users/edit/:id"
             />
             <Redirect to="/users"/>
         </Switch>

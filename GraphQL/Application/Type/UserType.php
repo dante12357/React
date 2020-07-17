@@ -18,7 +18,7 @@ class UserType extends ObjectType
                         'type' => Types::string(),
                         'description' => 'Имя'
                     ],
-                    'lastName' => [
+                    'last_name' => [
                         'type' => Types::string(),
                         'description' => 'Фамилия'
                     ],
@@ -31,7 +31,7 @@ class UserType extends ObjectType
                         'type' => Types::string(),
                         'description' => 'Email пользователя'
                     ],
-                    'dateEmployment' => [
+                    'date_employment' => [
                         'type' => Types::string(),
                         'description' => 'Дата начало работы пользователя',
 
@@ -56,7 +56,7 @@ class UserType extends ObjectType
                         'description' => 'Должность',
 
                     ],
-                    'avatarUrl' => [
+                    'avatar_url' => [
                         'type' => Types::string(),
                         'description' => 'Аватар пользователя',
                     ],

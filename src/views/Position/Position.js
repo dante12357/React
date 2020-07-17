@@ -14,6 +14,7 @@ import {
 import './position.css'
 import {SearchInput} from "../../components";
 import {PositionToolbar} from "./components"
+import {useTranslation} from "react-i18next";
 
 const getNumPosition_Query = gql`
     {
@@ -43,18 +44,16 @@ const Position = props => {
             query: ''
         }
     );
+
     const {loading, error, data} = useQuery(getNumPosition_Query, {
         // pollInterval: 500,
         fetchPolicy: "network-only"
         }
-    )
-
+    );
 
     if (loading) return <p>Loading ...</p>;
     return (
         <div>
-
-
             <div className="Position">
                 <Card>
                     <PositionToolbar
@@ -67,15 +66,15 @@ const Position = props => {
                         <PositionTable header={[
 
                             {
-                                name: 'Должность',
+                                name: 'Position',
                                 prop: 'position'
                             },
                             {
-                                name: 'Количество сотрудников с должностью ',
+                                name: 'Number of employees with a position',
                                 prop: 'positionCount'
                             },
                             {
-                                name: 'Удалить должность',
+                                name: 'Remove position',
                                 prop: 'delete'
                             },
                         ]} key={data.getNumPosition.PositionId} data={data.getNumPosition}
@@ -83,8 +82,6 @@ const Position = props => {
                     </div>
                 </Card>
             </div>
-
-
         </div>
     );
 

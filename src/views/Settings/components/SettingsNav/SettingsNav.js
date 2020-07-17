@@ -12,6 +12,7 @@ import {
     Button, Divider
 } from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -38,15 +39,14 @@ const useStyles = makeStyles(() => ({
 const SettingsNav = props => {
     const {pages} = props;
     const classes = useStyles();
+    const { t, i18n } = useTranslation('translation');
 
     return (
         <List>
-
             {pages.map(page => (
                 <ListItem
                     className={classes.root}
                     button
-
                     key={page.title}
                     component={RouterLink}
                     to={"/settings" + page.href}
@@ -54,7 +54,7 @@ const SettingsNav = props => {
                 >
 
                     <ListItemText
-                        primary={page.title}
+                        primary={t(page.title)}
                     />
                     <ListItemSecondaryAction>
                         <IconButton component={RouterLink}

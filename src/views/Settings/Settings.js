@@ -16,7 +16,7 @@ const Settings = props => {
 
     const pages = [
         {
-            title: 'Должности',
+            title: 'Positions',
             href: '/position',
             icon: <ArrowRightIcon/>
         },
@@ -27,7 +27,6 @@ const Settings = props => {
         },
 
     ];
-
     return (
         <div className="Settings">
             <Card

@@ -5,6 +5,7 @@ import {NavLink as RouterLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {List, ListItem, Button} from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import { useTranslation } from 'react-i18next';
 
 const useStyles = makeStyles(() => ({
 
@@ -46,6 +47,8 @@ const CustomRouterLink = forwardRef((props, ref) => (
 const SidebarNav = props => {
   const {pages} = props;
   const classes = useStyles();
+  const { t, i18n } = useTranslation('translation');
+
 
   return (
     <List>
@@ -61,8 +64,9 @@ const SidebarNav = props => {
             to={page.href}
           >
             <div className={classes.icon}>{page.icon}</div>
-            {page.title}
+            {t (page.title)}
           </Button>
+
         </ListItem>
       ))}
     </List>

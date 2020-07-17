@@ -12,6 +12,8 @@ import {toast} from 'react-toastify';
 import {getNumPosition_Query} from "../../Position";
 
 import DeleteIcon from '@material-ui/icons/Delete';
+import ErrorToast from "../../../../components/Toast/ErrorToast";
+import SuccessToast from "../../../../components/Toast/SuccessToast";
 
 const useStyles = makeStyles(() => ({}));
 
@@ -42,34 +44,15 @@ const RemovePosition = props => {
             refetchQueries: [{query: getNumPosition_Query }],
 
             onError: () => {
-                errorPosition()
+                ErrorToast('Нельзя удалить должность пока есть сотрудник с ней')
             },
             onCompleted: () => {
-                success()
+                SuccessToast('Должность успешно удалена')
             }
         });
 
 
     const {position} = state;
-
-    const success = () => toast.success('Должность успешно удалена', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-    });
-    const errorPosition = () => toast.error('Нельзя удалить должность пока есть сотрудник с ней', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-        progress: undefined,
-    });
 
     return (
         <div>
