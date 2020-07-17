@@ -57,10 +57,10 @@ const AddPosition = props => {
             // },
             refetchQueries: [{query: getNumPosition_Query }],
             onError: () =>{
-                ErrorToast('Such a position already exists')
+                ErrorToast(t('Such a position already exists'))
             },
             onCompleted: () => {
-                SuccessToast('Position successfully added')
+                SuccessToast(t('Position successfully added'))
             },
         });
     return (

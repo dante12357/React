@@ -10,7 +10,7 @@ import {useMutation} from '@apollo/react-hooks';
 import gql from 'graphql-tag'
 import {toast} from 'react-toastify';
 import {getNumPosition_Query} from "../../Position";
-
+import {useTranslation} from "react-i18next";
 import DeleteIcon from '@material-ui/icons/Delete';
 import ErrorToast from "../../../../components/Toast/ErrorToast";
 import SuccessToast from "../../../../components/Toast/SuccessToast";
@@ -30,6 +30,7 @@ const RemovePosition = props => {
         }
     `;
     const classes = useStyles();
+    const { t, i18n } = useTranslation('translation');
 
     const [state, setState] = useState({});
     const [removePosition, {data}] = useMutation(REMOVE_MUTATION,
@@ -44,10 +45,10 @@ const RemovePosition = props => {
             refetchQueries: [{query: getNumPosition_Query }],
 
             onError: () => {
-                ErrorToast('Нельзя удалить должность пока есть сотрудник с ней')
+                ErrorToast(t('Нельзя удалить должность пока есть сотрудник с ней'))
             },
             onCompleted: () => {
-                SuccessToast('Должность успешно удалена')
+                SuccessToast(t('Должность успешно удалена'))
             }
         });
 

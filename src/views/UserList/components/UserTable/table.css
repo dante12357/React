@@ -11,8 +11,5 @@
 .paper .bodyTableRow .bodyTableCell .nameContainer .avatar {
   margin-right: 16px;
 }
-.paper .bodyTableRow:hover {
-  background-color: rgba(0, 0, 0, 0.07);
-}
 
 /*# sourceMappingURL=table.css.map */

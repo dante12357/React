@@ -22,7 +22,6 @@ import {NavLink as RouterLink} from "react-router-dom";
 import {makeStyles} from "@material-ui/core/styles";
 import {useTranslation} from "react-i18next";
 
-
 const useStyles = makeStyles(() => ({
     title: {
         fontSize: '16px',

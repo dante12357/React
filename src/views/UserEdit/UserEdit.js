@@ -50,7 +50,7 @@ const User_Query = gql`
 
 const POST_MUTATION = gql `    
     mutation PostMutation($id:Int!, $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
-        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position_id: Int!) {
+        $dateEmployment: String!, $phone: String!, $probation: Int!, $salary: Int!, $position_id: Int!) {
         changeUser(id: $id, name: $name, last_name: $lastName, birthday: $birthday, email: $email, date_employment: $dateEmployment,
             phone: $phone, probation: $probation, salary: $salary, position_id: $position_id){
             id,
@@ -92,19 +92,19 @@ const UserEdit = props => {
 
     const dateProbation = [
         {
-            value: '1',
+            value: 1,
             label: '1 месяц',
         },
         {
-            value: '2',
+            value: 2,
             label: '2 месяца',
         },
         {
-            value: '3',
+            value: 3,
             label: '3 месяца',
         },
         {
-            value: '4',
+            value: 4,
             label: '4 месяца',
         },
     ];
@@ -130,10 +130,10 @@ const UserEdit = props => {
         variables:{id: +id},
 
         onError: () => {
-            ErrorToast('Ошибка')
+            ErrorToast(t('Ошибка'))
         },
         onCompleted: () => {
-            SuccessToast('Сотрудник успешно изменен')
+            SuccessToast(t('Сотрудник успешно изменен'))
         },
     })
 
@@ -141,6 +141,10 @@ const UserEdit = props => {
         // pollInterval: 500,
         variables: {id: +id},
         fetchPolicy: "network-only",
+        onCompleted : () =>{
+            setState({disabled: (data.user.probation > 0) ? false : true })
+
+        }
     });
 
     if (loading) return <div>loading</div>
@@ -166,7 +170,7 @@ const UserEdit = props => {
                 validationSchema={ReviewSchema}
                 onSubmit={(values, actions) => {
 
-                    values['probation'] = disabled ? "0" : values['probation'];
+                    values['probation'] = disabled ? 0 : values['probation'];
                     changeUser({
                         variables: values,
 
@@ -253,7 +257,6 @@ const UserEdit = props => {
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
-
                                         <Field
                                             defaultValue={data.user.date_employment}
                                             name="dateEmployment"
@@ -279,6 +282,7 @@ const UserEdit = props => {
                                                     : null
                                             }
                                         />
+
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <TextField
@@ -299,7 +303,6 @@ const UserEdit = props => {
                                                 </MenuItem>
                                             ))}
                                         </TextField>
-                                        {state.disabled=(data.user.probation == 0) ? true: false}
                                         <FormControlLabel
                                             margin="dense"
                                             control={
@@ -361,7 +364,6 @@ const UserEdit = props => {
                                                     : null
                                             }
                                         >
-
                                             {data.allPositions.map((option) => (
                                                 <MenuItem key={option.PositionId} value={option.PositionId}>
                                                     {option.position}

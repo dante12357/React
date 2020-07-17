@@ -14,7 +14,6 @@ import Paper from '@material-ui/core/Paper';
 import './table.css';
 import {NavLink as RouterLink} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-let avatar;
 // const row = (
 //   column,
 // ) => {
@@ -67,7 +66,7 @@ const UserTable = props => {
         </TableHead>
         <TableBody>
           {data.map((column) =>
-              <TableRow component={RouterLink} key={column.id} to={'/users/' + column.id} className="bodyTableRow">
+              <TableRow component={RouterLink} key={column.id} to={'/users/' + column.id} hover className="bodyTableRow">
                   <TableCell className="bodyTableCell" component="th" scope="row">
                       <div className="nameContainer">
                           {column.avatar_url ? (<Avatar className="avatar" src={column.avatar_url}/>)

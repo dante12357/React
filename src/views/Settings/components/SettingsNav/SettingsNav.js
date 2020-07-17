@@ -9,16 +9,19 @@ import {
     ListItemText,
     ListItemSecondaryAction,
     IconButton,
-    Button, Divider
+    Button, Divider, TableBody, TableRow, TableCell, Table
 } from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles(() => ({
-    root: {
-        color: '#37474f',
+    TableRowRoot: {
+        textDecoration: 'none',
     },
-
+    TableCellRoot: {
+        color: '#37474f',
+        padding: '12px 20px',
+    },
     // button: {
     //     padding: '10px 8px',
     //     justifyContent: 'flex-start',
@@ -39,35 +42,37 @@ const useStyles = makeStyles(() => ({
 const SettingsNav = props => {
     const {pages} = props;
     const classes = useStyles();
-    const { t, i18n } = useTranslation('translation');
+    const {t, i18n} = useTranslation('translation');
 
     return (
-        <List>
-            {pages.map(page => (
-                <ListItem
-                    className={classes.root}
-                    button
-                    key={page.title}
-                    component={RouterLink}
-                    to={"/settings" + page.href}
-                    divider
-                >
 
-                    <ListItemText
-                        primary={t(page.title)}
-                    />
-                    <ListItemSecondaryAction>
-                        <IconButton component={RouterLink}
-                                    edge="end"
-                                    to={"/settings" + page.href}
-                                    className={classes.icon}>{page.icon}</IconButton>
-                    </ListItemSecondaryAction>
-
-                </ListItem>
-
-            ))}
-
-        </List>
+        <Table>
+            <TableBody>
+                {pages.map(page => (
+                    <TableRow
+                        classes={{root: classes.TableRowRoot}}
+                        key={page.title}
+                        component={RouterLink}
+                        to={"/settings" + page.href}
+                        hover
+                    >
+                        <List component={TableCell}
+                              classes={{root: classes.TableCellRoot}}
+                        >
+                            <ListItemText
+                                primary={t(page.title)}
+                            />
+                            <ListItemSecondaryAction>
+                                <IconButton component={RouterLink}
+                                            edge="end"
+                                            to={"/settings" + page.href}
+                                            className={classes.icon}>{page.icon}</IconButton>
+                            </ListItemSecondaryAction>
+                        </List>
+                    </TableRow>
+                ))}
+            </TableBody>
+        </Table>
     );
 };
 

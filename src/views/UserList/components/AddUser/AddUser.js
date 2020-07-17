@@ -39,7 +39,7 @@ const useStyles = makeStyles(() => ({
 
 const POST_MUTATION = gql`
     mutation PostMutation( $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
-        $dateEmployment: String!, $phone: String!, $probation: String!, $salary: Int!, $position_id: Int!,  $avatarUrl: String!) {
+        $dateEmployment: String!, $phone: String!, $probation: Int!, $salary: Int!, $position_id: Int!,  $avatarUrl: String!) {
 
         addUser(name: $name, last_name: $lastName, birthday: $birthday, email: $email, date_employment: $dateEmployment,
             phone: $phone, probation: $probation, salary: $salary, position_id: $position_id, avatar_url: $avatarUrl) {
@@ -52,7 +52,6 @@ const POST_MUTATION = gql`
             phone,
             probation,
             salary,
-            position,
             position_id,
             avatar_url
         }
@@ -105,19 +104,19 @@ const AddUser = props => {
 
     const dateProbation = [
         {
-            value: '1',
+            value: 1,
             label: '1 месяц',
         },
         {
-            value: '2',
+            value: 2,
             label: '2 месяца',
         },
         {
-            value: '3',
+            value: 3,
             label: '3 месяца',
         },
         {
-            value: '4',
+            value: 4,
             label: '4 месяца',
         },
     ];
@@ -134,10 +133,12 @@ const AddUser = props => {
             refetchQueries: [{query: User_Query}],
 
             onError: () => {
-                ErrorToast('Error adding employee')
+                ErrorToast(t('Error adding employee'))
             },
             onCompleted: () => {
-                   SuccessToast('Employee added successfully')
+                   SuccessToast(t('Employee added successfully'))
+                closeForm(false)
+
             },
 
         });
@@ -166,21 +167,18 @@ const AddUser = props => {
                         email: '',
                         dateEmployment: new Date(),
                         phone: '',
-                        probation: '1',
+                        probation: 1,
                         salary: '',
-                        position: '',
                         avatarUrl: '',
                         position_id: '',
                     }}
                     validationSchema={ReviewSchema}
                     onSubmit={(values, actions) => {
 
-                        values['probation'] = disabled ? "0" : values['probation'];
+                        values['probation'] = disabled ? 0 : values['probation'];
                         addUser({
                             variables: values,
                         });
-
-                        closeForm(false)
                     }}
                 >
                     {({errors, handleChange, touched, handleBlur}) => (
@@ -285,7 +283,7 @@ const AddUser = props => {
                                         name="probation"
                                         onChange={handleChange}
                                         variant="outlined"
-                                        defaultValue={'1'}
+                                        defaultValue={1}
                                         disabled={disabled}
                                         displayEmpty
                                     >
