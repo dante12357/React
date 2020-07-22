@@ -16,8 +16,8 @@ const Main = props => {
 
   const [openSidebar, setOpenSidebar] = useState(false);
 
-  const handleSidebarOpen = () => {
-    setOpenSidebar(true);
+  const handleSidebarOpen = (value) => {
+    setOpenSidebar(value);
   };
 
   const handleSidebarClose = () => {
@@ -34,6 +34,7 @@ const Main = props => {
         onClose={handleSidebarClose}
         open={shouldOpenSidebar}
         variant={isDesktop ? 'persistent' : 'temporary'}
+        closeSidebar={handleSidebarOpen}
       />
       <main>
         {children}

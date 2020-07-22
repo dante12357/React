@@ -1,3 +1,6 @@
 .Position{
-  padding: 2% 12.101%;;
+  padding: 2% 12.101%;
+  .tableContent{
+    overflow-x: auto;
+  }
 }

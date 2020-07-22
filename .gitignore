@@ -8,3 +8,4 @@ webpack.config.js
 vendor
 node_modules
 .idea
+.sass-cache

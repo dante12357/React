@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {SearchInput} from '../../../../components';
-import './userToolbar.css'
+import './userTableToolbar.css'
 import {Button, Drawer, IconButton} from '@material-ui/core';
 import AddUser from '../AddUser';
 import {useTranslation} from "react-i18next";
@@ -21,7 +21,7 @@ const UserTableToolbar = props => {
     const { t, i18n } = useTranslation('translation');
 
   return (
-    <div className="userToolbar">
+    <div className="userTableToolbar">
       <AddUser
         onClose={handleSidebarClose}
         open={openSidebar}

@@ -24,13 +24,28 @@ class MutationType extends ObjectType
                             'date_employment' => Types::nonNull(Types::string()),
                             'phone' => Types::nonNull(Types::string()),
                             'probation' => Types::nonNull(Types::int()),
-                            'salary' => Types::int(),
+//                            'salary' => Types::int(),
                             'position_id' => Types::int(),
 //                            'position' => Types::nonNull(Types::int()),
                             'avatar_url' => Types::string(),
                         ],
                         'resolve' => function ($root, $args) {
                             return MutationType::changeUserResolve($root, $args);
+                        }
+                    ],
+                    'changeSalary' => [
+                        'type' => Types::salary(),
+                        'description' => 'Изменение зарплаты',
+                        'args' => [
+                            'id' => Types::int(),
+                            'user_id' => Types::int(),
+                            'review_period' => Types::nonNull(Types::int()),
+                            'active_from' => Types::nonNull(Types::string()),
+                            'salary' => Types::int(),
+//                            'last_review' => Types::string(),
+                        ],
+                        'resolve' => function ($root, $args) {
+                            return MutationType::changeSalaryResolve($root, $args);
                         }
                     ],
                     'addUser' => [
@@ -51,6 +66,16 @@ class MutationType extends ObjectType
                         ],
                         'resolve' => function ($root, $args) {
                             return MutationType::addUserResolve($root, $args);
+                        }
+                    ],
+                    'removeUser' => [
+                        'type' => Types::user(),
+                        'description' => 'Удалить сотрудника',
+                        'args' => [
+                            'id' => Types::int(),
+                        ],
+                        'resolve' => function ($root, $args) {
+                            return MutationType::removeUserResolve($root, $args);
                         }
                     ],
                     'addPosition' => [
@@ -83,10 +108,8 @@ class MutationType extends ObjectType
         parent::__construct($config);
     }
 
-    public static function changeUserResolve($root, $args)
+    public static function changeUserResolve ($root, $args)
     {
-        $args['birthday'] = new  DateTime($args['birthday']);
-        $args['birthday'] = $args['birthday']->format('Y-m-d');
         $args['date_employment'] = new DateTime($args['date_employment']);
         $args['date_employment'] = $args['date_employment']->format('Y-m-d');
         Db::update("UPDATE userList SET 
@@ -97,9 +120,22 @@ class MutationType extends ObjectType
             `date_employment` = '{$args['date_employment']}',
             `phone` = '{$args['phone']}',
             `probation` = '{$args['probation']}',
-            `salary` = '{$args['salary']}',
             `position_id` = '{$args['position_id']}' WHERE `id` = {$args['id']}");
         return Db::selectOne("SELECT * from userList WHERE id = {$args['id']}");
+    }
+
+    public static function changeSalaryResolve($root, $args)
+    {
+        $lastReview = new  DateTime();
+        $lastReview = $lastReview->format('Y-m-d');
+
+        Db::update("UPDATE salary SET 
+            `review_period` = '{$args['review_period']}',
+            `active_from` = '{$args['active_from']}',
+            `salary` = '{$args['salary']}',
+            `last_review` = '{$lastReview}'
+             WHERE `user_id` = {$args['user_id']}");
+//        return Db::selectOne("SELECT * from salary WHERE user_id = {$args['user_id']}");
     }
 
     public static function addUserResolve($root, $args)
@@ -110,13 +146,23 @@ class MutationType extends ObjectType
         $args['date_employment'] = $args['date_employment']->format('Y-m-d');
 
         $userId = Db::insert("INSERT INTO userList (`name`,`last_name`,`birthday`,`email`,
-                            `date_employment`,`phone`,`probation`,`salary`,`position_id`) VALUES 
+                            `date_employment`,`phone`,`probation`,`position_id`) VALUES 
                         ('{$args['name']}','{$args['last_name']}','{$args['birthday']}','{$args['email']}',
-                        '{$args['date_employment']}','{$args['phone']}','{$args['probation']}','{$args['salary']}',
+                        '{$args['date_employment']}','{$args['phone']}','{$args['probation']}',
                         '{$args['position_id']}')");
-        return Db::selectOne("SELECT * from userList INNER JOIN `positions` ON position_id = positions.PositionId WHERE userList.id = $userId ");
-    }
 
+        Db::insert("INSERT INTO salary (`user_id`,`salary`) VALUES ('{$userId}','{$args['salary']}')");
+        Db::insert("INSERT INTO historySalary (`user_id`,`salary`,`active_from`) VALUES ('{$userId}','{$args['salary']}','{$args['date_employment']}')");
+
+        return Db::selectOne("SELECT * from userList INNER JOIN `positions` ON position_id = positions.PositionId WHERE userList.id = $userId ");
+
+    }
+    public static function removeUserResolve($root, $args)
+    {
+        Db::insert("DELETE FROM `userList` WHERE id = {$args['id']}");
+        return Db::select('SELECT * FROM `userList`');
+
+    }
     public static function addPositionResolve($root, $args)
     {
         $positionId = Db::insert("INSERT INTO `positions`(`position`) VALUES ('{$args['position']}')");

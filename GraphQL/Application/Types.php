@@ -5,6 +5,7 @@ include_once "Type/UserType.php";
 include_once "Type/PositionType.php";
 include_once "Type/MutationType.php";
 include_once "Type/InputUserType.php";
+include_once "Type/SalaryType.php";
 
 use GraphQL\Type\Definition\Type;
 
@@ -16,6 +17,7 @@ class Types
     private static $mutation;
     private static $inputUser;
     private static $numPosition;
+    private static $salary;
 
     public static function query()
     {
@@ -49,7 +51,10 @@ class Types
     {
         return self::$position ?: (self::$position = new PositionType());
     }
-
+    public static function salary()
+    {
+        return self::$salary ?: (self::$salary = new SalaryType());
+    }
     public static function mutation()
     {
         return self::$mutation ?: (self::$mutation = new MutationType());

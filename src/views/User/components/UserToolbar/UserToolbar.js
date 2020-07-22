@@ -2,9 +2,8 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types';
 import {Button, Tabs, Tab, Box, AppBar, Divider} from "@material-ui/core";
 import TabPanel from "./components/TabPanel";
-import UserDetails from "./components/UserDetails";
+import {UserDetails, UserSalary} from "./components";
 import './userToolbar.css'
-import UserEdit from "../../../UserEdit";
 import {useTranslation} from "react-i18next";
 
 const UserToolbar = prop => {
@@ -29,7 +28,7 @@ const UserToolbar = prop => {
             <div>
                 <Tabs value={value} textColor="secondary" onChange={handleChange}>
                     <Tab label={t("Details")} {...a11yProps(0)} />
-                    <Tab label="Что-то" {...a11yProps(1)} />
+                    <Tab label={t("Salary")} {...a11yProps(1)} />
                     <Tab label="Готовится" {...a11yProps(2)} />
                 </Tabs>
                 <Divider/>
@@ -38,7 +37,7 @@ const UserToolbar = prop => {
                 <UserDetails data={data}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Пусто
+                <UserSalary data={data}/>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Тут тоже

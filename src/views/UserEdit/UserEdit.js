@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import PropTypes from "prop-types";
 import {toast} from "react-toastify";
 import {
     Button,
@@ -12,11 +13,10 @@ import {
     IconButton, InputAdornment,
     MenuItem,
     TextField,
-    Card
+    Card, TableCell
 } from "@material-ui/core";
 import {Field, Form, Formik} from "formik";
 import {DatePickerField} from "../UserList/components/AddUser/components";
-import PropTypes from "prop-types";
 import {useMutation, useQuery} from '@apollo/react-hooks';
 import gql from 'graphql-tag'
 import * as yup from 'yup'
@@ -26,6 +26,8 @@ import {makeStyles} from "@material-ui/core/styles";
 import {useTranslation} from "react-i18next";
 import ErrorToast from '../../components/Toast/ErrorToast'
 import SuccessToast from "../../components/Toast/SuccessToast";
+import {NavLink as RouterLink} from "react-router-dom";
+import DeleteIcon from "@material-ui/core/SvgIcon/SvgIcon";
 
 
 const User_Query = gql`
@@ -39,7 +41,7 @@ const User_Query = gql`
             birthday,
             date_employment,
             probation,
-            salary,
+            #            salary,
             position_id
         },
         allPositions{
@@ -48,11 +50,15 @@ const User_Query = gql`
         }
     }`
 
-const POST_MUTATION = gql `    
+const POST_MUTATION = gql`
     mutation PostMutation($id:Int!, $name: String!,  $lastName: String!, $birthday: String!, $email: String!,
-        $dateEmployment: String!, $phone: String!, $probation: Int!, $salary: Int!, $position_id: Int!) {
+        $dateEmployment: String!, $phone: String!, $probation: Int!,
+        #        $salary: Int!,
+        $position_id: Int!) {
         changeUser(id: $id, name: $name, last_name: $lastName, birthday: $birthday, email: $email, date_employment: $dateEmployment,
-            phone: $phone, probation: $probation, salary: $salary, position_id: $position_id){
+            phone: $phone, probation: $probation,
+            #            salary: $salary,
+            position_id: $position_id){
             id,
             name,
             last_name,
@@ -61,18 +67,25 @@ const POST_MUTATION = gql `
             date_employment,
             phone,
             probation,
-            salary,
+            #            salary,
             position_id,
 
         }}
 `
 
 const useStyles = makeStyles(() => ({
+    buttonRoot: {
+        color: '#fff',
+        backgroundColor: '#f44336',
+        '&:hover': {
+            backgroundColor: "#d32f2f"
+        }
 
+    },
 }));
 const UserEdit = props => {
     const {match: {params: {id}}} = props;
-    const { t, i18n } = useTranslation('translation');
+    const {t, i18n} = useTranslation('translation');
 
     const classes = useStyles();
 
@@ -120,14 +133,14 @@ const UserEdit = props => {
             // .matches(phoneRegExp,"Неправильно написан номер")
             ,
             //probation: yup.string().oneOf(['1 месяц', '2 месяца', '3 месяца', '4 месяца'], "Выберите один из сроков").required(),
-            salary: yup.number().min(0, t("The salary is negative, and YOU are a genius")).required(t("Enter salary")),
+            // salary: yup.number().min(0, t("The salary is negative, and YOU are a genius")).required(t("Enter salary")),
             position_id: yup.string().required(t("Select position")),
 
         });
 
-    const [changeUser,{}] =useMutation(POST_MUTATION,{
+    const [changeUser, {}] = useMutation(POST_MUTATION, {
         // refetchQueries: [{query: User_Query }],
-        variables:{id: +id},
+        variables: {id: +id},
 
         onError: () => {
             ErrorToast(t('Ошибка'))
@@ -141,8 +154,8 @@ const UserEdit = props => {
         // pollInterval: 500,
         variables: {id: +id},
         fetchPolicy: "network-only",
-        onCompleted : () =>{
-            setState({disabled: (data.user.probation > 0) ? false : true })
+        onCompleted: () => {
+            setState({disabled: (data.user.probation > 0) ? false : true})
 
         }
     });
@@ -161,8 +174,8 @@ const UserEdit = props => {
                     email: data.user.email,
                     dateEmployment: data.user.date_employment,
                     phone: data.user.phone,
-                    probation: data.user.probation,
-                    salary: +data.user.salary,
+                    probation: +data.user.probation,
+                    // salary: +data.user.salary,
                     position: data.user.position,
                     avatarUrl: data.user.avatar_url,
                     position_id: data.user.position_id,
@@ -180,12 +193,12 @@ const UserEdit = props => {
                 {({errors, handleChange, touched, handleBlur}) => (
 
                     <Form autoComplete="off">
-                            <CardHeader
-                                className="cardHeader"
-                                // subheader="Добавьте нового сотрудника"
-                                title={t("Employee editing")}
-                            />
-                            <Card>
+                        <CardHeader
+                            className="cardHeader"
+                            // subheader="Добавьте нового сотрудника"
+                            title={t("Employee editing")}
+                        />
+                        <Card>
 
                             <Divider/>
                             <CardContent>
@@ -318,33 +331,33 @@ const UserEdit = props => {
                                             label={t("No probationary period")}
                                         />
                                     </Grid>
-                                    <Grid item xs={12} sm={6}>
+                                    {/*<Grid item xs={12} sm={6}>*/}
 
-                                        <TextField
-                                            defaultValue={data.user.salary}
-                                            error={errors.salary && touched.salary}
-                                            fullWidth
-                                            label={t("Salary")}
-                                            margin="dense"
-                                            name="salary"
-                                            onChange={handleChange}
-                                            onBlur={handleBlur}
-                                            variant="outlined"
-                                            type="number"
-                                            InputProps={{
-                                                startAdornment: (
-                                                    <InputAdornment position="start">
-                                                        $
-                                                    </InputAdornment>
-                                                ),
-                                            }}
-                                            helperText={
-                                                errors.salary && touched.salary
-                                                    ? errors.salary
-                                                    : null
-                                            }
-                                        />
-                                    </Grid>
+                                    {/*    <TextField*/}
+                                    {/*        defaultValue={data.user.salary}*/}
+                                    {/*        error={errors.salary && touched.salary}*/}
+                                    {/*        fullWidth*/}
+                                    {/*        label={t("Salary")}*/}
+                                    {/*        margin="dense"*/}
+                                    {/*        name="salary"*/}
+                                    {/*        onChange={handleChange}*/}
+                                    {/*        onBlur={handleBlur}*/}
+                                    {/*        variant="outlined"*/}
+                                    {/*        type="number"*/}
+                                    {/*        InputProps={{*/}
+                                    {/*            startAdornment: (*/}
+                                    {/*                <InputAdornment position="start">*/}
+                                    {/*                    $*/}
+                                    {/*                </InputAdornment>*/}
+                                    {/*            ),*/}
+                                    {/*        }}*/}
+                                    {/*        helperText={*/}
+                                    {/*            errors.salary && touched.salary*/}
+                                    {/*                ? errors.salary*/}
+                                    {/*                : null*/}
+                                    {/*        }*/}
+                                    {/*    />*/}
+                                    {/*</Grid>*/}
                                     <Grid item xs={12} sm={6}>
 
                                         <TextField
@@ -371,20 +384,35 @@ const UserEdit = props => {
                                             ))}
                                         </TextField>
                                     </Grid>
+                                    <Grid container item spacing={2}>
+                                        <Grid item>
+                                            <Button
+                                                color="primary"
+                                                variant="contained"
+                                                type="submit">
+                                                {t('Change')}
+                                            </Button>
+                                        </Grid>
+                                        <Grid item>
+                                            <Button
+
+
+                                                component={RouterLink}
+                                                to={'/users/' + data.user.id}
+                                                classes={{
+                                                    root: classes.buttonRoot
+                                                }}
+                                                variant="contained"
+                                            >
+                                                {t('Cancel')}
+                                            </Button>
+                                        </Grid>
+                                    </Grid>
                                 </Grid>
                             </CardContent>
-                            <CardActions>
 
-                                <Button
-                                    color="primary"
-                                    variant="contained"
-                                    type="submit">
-                                    Изменить
-                                </Button>
-                            </CardActions>
                         </Card>
                     </Form>
-
                 )}
             </Formik>
 
@@ -399,4 +427,5 @@ UserEdit.propTypes = {
         })
     }),
 };
+
 export default UserEdit

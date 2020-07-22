@@ -20,7 +20,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
 import {Query} from 'react-apollo'
 import {useMutation, useQuery} from '@apollo/react-hooks';
-
 import gql from 'graphql-tag'
 import {Formik, Field, Form} from 'formik'
 import * as yup from 'yup'
@@ -31,9 +30,12 @@ import {useTranslation} from "react-i18next";
 import ErrorToast from "../../../../components/Toast/ErrorToast";
 import SuccessToast from "../../../../components/Toast/SuccessToast";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     drawer: {
-        width: 540,
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+            width: '540px',
+        }
     },
 }));
 

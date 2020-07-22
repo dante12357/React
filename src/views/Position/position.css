@@ -1,5 +1,6 @@
 .Position {
-  padding: 2% 12.101%;
-}
+  padding: 2% 12.101%; }
+  .Position .tableContent {
+    overflow-x: auto; }
 
 /*# sourceMappingURL=position.css.map */

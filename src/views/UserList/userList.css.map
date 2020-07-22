@@ -1,1 +1,7 @@
-{"version":3,"sourceRoot":"","sources":["userList.scss"],"names":[],"mappings":"AAAA;EACE;;AACA;EACE","file":"userList.css"}
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACP,OAAO,EAAE,IAAI;EACb,uBAAa;IACX,UAAU,EAAE,IAAI",
+"sources": ["userList.scss"],
+"names": [],
+"file": "userList.css"
+}

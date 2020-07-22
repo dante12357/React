@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({}));
 const RemovePosition = props => {
     const {id, disabled} = props;
     const REMOVE_MUTATION = gql`
-        mutation PostMutation( $PositionId: Int!) {
+        mutation RemoveMutation( $PositionId: Int!) {
             removePosition(PositionId: $PositionId){
                 PositionId,
                 position,

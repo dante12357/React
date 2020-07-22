@@ -1,15 +1,12 @@
 .paper {
   box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
-}
-.paper .bodyTableRow {
-  text-decoration: none;
-}
-.paper .bodyTableRow .bodyTableCell .nameContainer {
-  display: flex;
-  align-items: center;
-}
-.paper .bodyTableRow .bodyTableCell .nameContainer .avatar {
-  margin-right: 16px;
-}
+  overflow-x: auto; }
+  .paper .bodyTableRow {
+    text-decoration: none; }
+    .paper .bodyTableRow .bodyTableCell .nameContainer {
+      display: flex;
+      align-items: center; }
+      .paper .bodyTableRow .bodyTableCell .nameContainer .avatar {
+        margin-right: 16px; }
 
 /*# sourceMappingURL=table.css.map */

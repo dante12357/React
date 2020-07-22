@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import {Divider, Drawer} from '@material-ui/core';
+import {Divider, Drawer, IconButton, List} from '@material-ui/core';
 import {Profile, SidebarNav} from './components';
 import PeopleIcon from '@material-ui/icons/People';
 import SettingsIcon from '@material-ui/icons/Settings';
-
+import CloseIcon from '@material-ui/icons/Close';
+import './sidebar.css'
 const useStyles = makeStyles((theme) => ({
   drawer: {
     width: 240,
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Sidebar = props => {
-  const {open, variant, onClose} = props;
+  const {open, variant, onClose, closeSidebar} = props;
 
   const classes = useStyles();
 
@@ -43,20 +44,28 @@ const Sidebar = props => {
 
     <Drawer
       classes={{paper: classes.drawer}}
+      className={'sidebar'}
       anchor="left"
       onClose={onClose}
       open={open}
       variant={variant}
     >
-      <div
-        className={clsx(classes.root)}
-      >
-        {/*<Profile />*/}
-        <Divider/>
-        <SidebarNav
-          pages={pages}
-        />
+      <div className='drawerHeader'>
+        <IconButton
+            onClick={() => {
+              closeSidebar(false)
+            }}>
+          <CloseIcon/>
+        </IconButton>
+
       </div>
+
+        {/*<Profile />*/}
+        {/*<Divider />*/}
+        <SidebarNav
+            closeSidebar={closeSidebar}
+            pages={pages}
+        />
     </Drawer>
   );
 };
@@ -64,7 +73,8 @@ const Sidebar = props => {
 Sidebar.propTypes = {
   onClose: PropTypes.func,
   open: PropTypes.bool.isRequired,
-  variant: PropTypes.string.isRequired
+  variant: PropTypes.string.isRequired,
+  closeSidebar: PropTypes.func,
 
 };
 

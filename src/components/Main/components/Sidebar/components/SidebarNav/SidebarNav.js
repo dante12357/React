@@ -3,21 +3,15 @@
 import React, {forwardRef} from 'react';
 import {NavLink as RouterLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {List, ListItem, Button} from '@material-ui/core';
+import {List, ListItem, Button, IconButton, Divider} from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import { useTranslation } from 'react-i18next';
-
+import CloseIcon from '@material-ui/icons/Close';
+import ChevronRightIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import {Form} from "formik";
+import './sidebarNav.css';
 const useStyles = makeStyles(() => ({
 
-  button: {
-    color: '#37474f',
-    padding: '10px 8px',
-    justifyContent: 'flex-start',
-    textTransform: 'none',
-    letterSpacing: 0,
-    width: '100%',
-    fontWeight: 400
-  },
   icon: {
     color: '#78909c',
     width: 24,
@@ -34,6 +28,7 @@ const useStyles = makeStyles(() => ({
     }
   }
 }));
+
 const CustomRouterLink = forwardRef((props, ref) => (
   <div
     ref={ref}
@@ -45,22 +40,26 @@ const CustomRouterLink = forwardRef((props, ref) => (
 
 
 const SidebarNav = props => {
-  const {pages} = props;
+  const {pages, closeSidebar} = props;
   const classes = useStyles();
   const { t, i18n } = useTranslation('translation');
 
 
   return (
-    <List>
+    <List className={'sidebarNav'}>
+
+
       {pages.map(page => (
+
         <ListItem
-          disableGutters
+          // disableGutters
           key={page.title}
         >
           <Button
             activeClassName={classes.active}
-            className={classes.button}
+            className={'button'}
             component={CustomRouterLink}
+            onClick={() => {closeSidebar(false)}}
             to={page.href}
           >
             <div className={classes.icon}>{page.icon}</div>
@@ -75,7 +74,9 @@ const SidebarNav = props => {
 
 SidebarNav.propTypes = {
   className: PropTypes.string,
-  pages: PropTypes.array.isRequired
+  pages: PropTypes.array.isRequired,
+  closeSidebar: PropTypes.func,
+
 };
 
 export default SidebarNav;

@@ -2,59 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290fd45d-b33e-49f6-9f2c-1f758ca545ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/locales/en/translations.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/ru/translations.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Toast/ErrorToast/ErrorToast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Toast/ErrorToast/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Toast/SuccessToast/SuccessToast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Toast/SuccessToast/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/i18n.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/TabPanel/TabPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/TabPanel/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/userToolbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/User/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/UserEdit/UserEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/UserEdit/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/UserEdit/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/UserEdit/userEdit.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GraphQL/Application/Type/SalaryType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/sidebarNav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main/components/Sidebar/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/UserSalary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userTableToolbar.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userTableToolbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphQL/Application/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GraphQL/Application/Type/InputUserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/InputUserType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GraphQL/Application/Type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Type/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphQL/Application/Types.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/Application/Types.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphQL/graphql.php" beforeDir="false" afterPath="$PROJECT_DIR$/GraphQL/graphql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/ru/translations.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/ru/translations.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/Main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/SidebarNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/SidebarNav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/components/Topbar/Topbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/components/Topbar/Topbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Position/Position.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/Position.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/Settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/position.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/position.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/position.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/position.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Position/position.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Position/position.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/User/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/UserList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/UserList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserEdit/UserEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserEdit/UserEdit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/UserToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/UserTableToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/userToolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/userToolbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserToolbar/userToolbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/UserTableToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/UserTableToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userTableToolbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/userList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/userList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/userList.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/userList.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserList/userList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserList/userList.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,104 +65,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php">
+        <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/UserSalary.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="388">
+              <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js">
+        <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+            <state relative-caret-position="953">
+              <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="135" column="43" lean-forward="true" selection-start-line="135" selection-start-column="43" selection-end-line="135" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Executor/ReferenceExecutor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-11">
+              <caret line="641" column="35" lean-forward="true" selection-start-line="641" selection-start-column="35" selection-end-line="641" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js">
+        <entry file="file://$PROJECT_DIR$/GraphQL/graphql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
-              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="199">
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/UserEdit/UserEdit.js">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/SalaryType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#624#647#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="368">
+              <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Toast/ErrorToast/ErrorToast.js">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="637">
+              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Toast/SuccessToast/SuccessToast.js">
+        <entry file="file://$PROJECT_DIR$/GraphQL/Application/Types.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/locales/en/translations.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -186,39 +164,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>position</find>
-      <find>numposi</find>
-      <find>numPosition</find>
-      <find>a</find>
-      <find>allp</find>
-      <find>all</find>
-      <find>.css</find>
-      <find>delet</find>
-      <find>position_Query</find>
-      <find>map</find>
-      <find>draw</find>
-      <find>use</find>
-      <find>uses</find>
-      <find>fonts</find>
-      <find>Enter</find>
-      <find>Last name</find>
-      <find>Number of employees with a position</find>
-      <find>pro</find>
-      <find>em</find>
-      <find>Employment</find>
-      <find>avatarUrl</find>
-      <find>lastName</find>
-      <find>date_employment</find>
-      <find>avatar_url</find>
-      <find>dateEmployment</find>
-      <find>списо</find>
-      <find>{setState.disabled =  (data.user.probation == 0) ? true: false}</find>
-      <find>setSt</find>
-      <find>true</find>
       <find>toast.</find>
+      <find>true</find>
+      <find>SuccessToast(</find>
+      <find>prob</find>
+      <find>divid</find>
+      <find>divi</find>
+      <find>closeForm</find>
+      <find>closeSidebar</find>
+      <find>adduse</find>
+      <find>userDetails</find>
+      <find>But</find>
+      <find>hover</find>
+      <find>spac</find>
+      <find>6px</find>
+      <find>p</find>
+      <find>pudding</find>
+      <find>over</find>
+      <find>removePo</find>
+      <find>useredit</find>
+      <find>No probationary period</find>
+      <find>No trial period</find>
+      <find>/ed</find>
+      <find>:id</find>
+      <find>$PROJECT_DIR$/../../../</find>
+      <find>classes.root</find>
+      <find>DatePickerField</find>
+      <find>Cancel</find>
+      <find>disa</find>
+      <find>mutation(</find>
+      <find>Update salary</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>classes.rootLeftTableCell</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -227,57 +206,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/UerToolbar.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/index.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/TabPanel.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/index.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/index.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/index.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/userToolbar.scss" />
-        <option value="$PROJECT_DIR$/src/views/UserEdit/components/index.js" />
-        <option value="$PROJECT_DIR$/src/views/UserEdit/index.js" />
-        <option value="$PROJECT_DIR$/src/views/index.js" />
-        <option value="$PROJECT_DIR$/src/Routes.js" />
-        <option value="$PROJECT_DIR$/src/components/Main/main.scss" />
-        <option value="$PROJECT_DIR$/GraphQL/Application/Db.php" />
-        <option value="$PROJECT_DIR$/src/views/UserEdit/userEdit.css" />
-        <option value="$PROJECT_DIR$/src/views/UserEdit/userEdit.scss" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Main/components/Topbar/Topbar.js" />
-        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/SidebarNav.js" />
-        <option value="$PROJECT_DIR$/public/locales/ru/translation.json" />
-        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" />
-        <option value="$PROJECT_DIR$/public/locales/en/translation.json" />
-        <option value="$PROJECT_DIR$/src/i18n.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/UserTableToolbar.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" />
-        <option value="$PROJECT_DIR$/src/views/Settings/Settings.js" />
-        <option value="$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js" />
-        <option value="$PROJECT_DIR$/src/views/Position/Position.js" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js" />
-        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js" />
-        <option value="$PROJECT_DIR$/GraphQL/Application/Type/UserType.php" />
-        <option value="$PROJECT_DIR$/src/views/User/User.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/UserList.js" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" />
-        <option value="$PROJECT_DIR$/GraphQL/Application/Type/InputUserType.php" />
-        <option value="$PROJECT_DIR$/public/locales/en/translations.json" />
-        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js" />
-        <option value="$PROJECT_DIR$/public/locales/ru/translations.json" />
-        <option value="$PROJECT_DIR$/src/components/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Toast/Toast.js" />
-        <option value="$PROJECT_DIR$/src/components/Toast/ErrorToast/Toast.js" />
-        <option value="$PROJECT_DIR$/src/components/Toast/SuccessToast/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Toast/ErrorToast/index.js" />
-        <option value="$PROJECT_DIR$/src/components/Toast/index.js" />
-        <option value="$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php" />
-        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" />
-        <option value="$PROJECT_DIR$/src/components/Toast/ErrorToast/ErrorToast.js" />
         <option value="$PROJECT_DIR$/src/components/Toast/SuccessToast/SuccessToast.js" />
+        <option value="$PROJECT_DIR$/src/components/Toast/ErrorToast/ErrorToast.js" />
+        <option value="$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userToolbar.scss" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userTableToolbar.css.map" />
+        <option value="$PROJECT_DIR$/src/views/dsv.scss" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/UserTableToolbar.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userTableToolbar.scss" />
+        <option value="$PROJECT_DIR$/src/components/Main/Main.js" />
+        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/SidebarNav.js" />
+        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/sidebarNav.scss" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/addUser.scss" />
+        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js" />
+        <option value="$PROJECT_DIR$/src/components/Main/components/Sidebar/sidebar.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.scss" />
+        <option value="$PROJECT_DIR$/src/views/UserList/userList.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/position.css" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/UserTable/table.scss" />
+        <option value="$PROJECT_DIR$/src/views/Position/position.scss" />
         <option value="$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js" />
-        <option value="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/Salary/index.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/Salary/Salary.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/index.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/index.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/index.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/components/DatePickerField/index.js" />
+        <option value="$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js" />
+        <option value="$PROJECT_DIR$/src/components/index.js" />
+        <option value="$PROJECT_DIR$/src/components/DatePickerField/DatePickerField.js" />
+        <option value="$PROJECT_DIR$/public/locales/en/translations.json" />
+        <option value="$PROJECT_DIR$/public/locales/ru/translations.json" />
         <option value="$PROJECT_DIR$/src/views/UserEdit/UserEdit.js" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/UserType.php" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js" />
+        <option value="$PROJECT_DIR$/src/views/User/User.js" />
+        <option value="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/UserSalary.js" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Types.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/SalaryType.php" />
+        <option value="$PROJECT_DIR$/GraphQL/graphql.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Db.php" />
+        <option value="$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php" />
       </list>
     </option>
   </component>
@@ -304,8 +283,8 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1440" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -321,6 +300,11 @@
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
@@ -343,6 +327,31 @@
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="locales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="locales" type="462c0819:PsiDirectoryNode" />
+              <item name="en" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="locales" type="462c0819:PsiDirectoryNode" />
+              <item name="ru" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -350,29 +359,6 @@
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Toast" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Toast" type="462c0819:PsiDirectoryNode" />
-              <item name="ErrorToast" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Toast" type="462c0819:PsiDirectoryNode" />
-              <item name="SuccessToast" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
@@ -385,33 +371,14 @@
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Position" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Position" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Position" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,20 +386,72 @@
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="PositionToolbar" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AddPosition" type="462c0819:PsiDirectoryNode" />
+              <item name="UserToolbar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tools" type="b2602c69:ProjectViewProjectNode" />
               <item name="tools" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Position" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="RemovePosition" type="462c0819:PsiDirectoryNode" />
+              <item name="UserToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UserToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UserDetails" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="User" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UserToolbar" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UserSalary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="UserEdit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="UserList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="UserList" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="UserList" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="AddUser" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -446,7 +465,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Toast/ErrorToast" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -456,23 +475,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/components/Toast/ErrorToast" />
       <recent name="$PROJECT_DIR$/src/components/Toast/SuccessToast" />
       <recent name="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails" />
       <recent name="$PROJECT_DIR$/src/views/Position/components/DeletePosition" />
-      <recent name="$PROJECT_DIR$/src/views/Position/components/PositionTable" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Main/components/Sidebar" />
       <recent name="$PROJECT_DIR$/src/components/Toast/SuccessToast" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/views/User/components/UserToolbar/components/TabPanel" />
       <recent name="$PROJECT_DIR$/GraphQL" />
-      <recent name="$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -522,7 +541,9 @@
       <workItem from="1594364684415" duration="15133000" />
       <workItem from="1594548894905" duration="17846000" />
       <workItem from="1594708401088" duration="23499000" />
-      <workItem from="1594810845448" duration="37522000" />
+      <workItem from="1594810845448" duration="56591000" />
+      <workItem from="1595171441286" duration="21279000" />
+      <workItem from="1595317486536" duration="16919000" />
     </task>
     <task id="LOCAL-00001" summary="добавлено автообновление таблицы, после добавления сотрудника">
       <created>1594049119749</created>
@@ -559,11 +580,25 @@
       <option name="project" value="LOCAL" />
       <updated>1594708709605</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added employee page, editing and switching languages ​​(en, ru)">
+      <created>1594976850752</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1594976850752</updated>
+    </task>
+    <task id="LOCAL-00007" summary="edits and validation on backend">
+      <created>1594994902265</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594994902265</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252711000" />
+    <option name="totallyTimeSpent" value="309978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -577,23 +612,23 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23104435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49928468" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="TypeScript" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49356222" weight="0.32891566" />
+      <window_info anchor="bottom" id="TypeScript" order="1" sideWeight="0.4985694" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49928468" weight="0.31445783" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.5193133" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.49928468" visible="true" weight="0.31445783" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="GraphQL" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5007153" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5064378" side_tool="true" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -609,7 +644,9 @@
     <MESSAGE value="Должности" />
     <MESSAGE value="переделано на хуки и отключено кеширование" />
     <MESSAGE value="spl_autoload_register and cash network-only" />
-    <option name="LAST_COMMIT_MESSAGE" value="spl_autoload_register and cash network-only" />
+    <MESSAGE value="added employee page, editing and switching languages ​​(en, ru)" />
+    <MESSAGE value="edits and validation on backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="edits and validation on backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -618,11 +655,6 @@
           <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
           <line>44</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
-          <line>52</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
@@ -635,29 +667,9 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php</url>
-          <line>53</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/GraphQL/graphql.php</url>
           <line>47</line>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php</url>
-          <line>21</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php</url>
-          <line>91</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php</url>
-          <line>100</line>
-          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/GraphQL/Application/Db.php</url>
@@ -668,6 +680,11 @@
           <url>file://$PROJECT_DIR$/GraphQL/Application/Db.php</url>
           <line>68</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php</url>
+          <line>131</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -687,226 +704,175 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Error/Error.php">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/GraphQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="323" selection-start-line="323" selection-end-line="323" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        <state relative-caret-position="345">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Executor/ReferenceExecutor.php">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="818" selection-start-line="818" selection-end-line="818" />
+        <state relative-caret-position="140">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/userTableToolbar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="840" column="20" selection-start-line="840" selection-start-column="20" selection-end-line="840" selection-end-column="20" />
+        <state relative-caret-position="30">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphQL/graphql.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react/cjs/react.development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="1494" column="9" selection-start-line="1494" selection-start-column="9" selection-end-line="1494" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserEdit/userEdit.scss">
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/table.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserEdit/userEdit.css">
+    <entry file="file://$PROJECT_DIR$/src/components/Main/components/Sidebar/sidebar.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/locales/ru/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/i18next/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="675" column="2" selection-start-line="675" selection-start-column="2" selection-end-line="675" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main/components/Topbar/Topbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="28" column="50" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Main/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
+        <state relative-caret-position="185">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/UserTable.js">
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/addUser.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Main/components/Sidebar/Sidebar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="180">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTableToolbar/UserTableToolbar.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+        <state relative-caret-position="150">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/positionTable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-653">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/i18n.js">
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/userList.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main/components/Sidebar/components/SidebarNav/SidebarNav.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Position/position.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="66" column="28" lean-forward="true" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-          <folding>
-            <element signature="e#81#121#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/components/SettingsNav/SettingsNav.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Position/position.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="59" column="58" lean-forward="true" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="58" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/UserList.js">
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/Position.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        <state relative-caret-position="-75">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/loader-runner/lib/LoaderRunner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="177">
+          <caret line="213" column="15" selection-start-line="213" selection-start-column="15" selection-end-line="213" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/UserTable/table.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/positionToolbar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="49" lean-forward="true" selection-start-column="49" selection-end-column="49" />
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Settings/Settings.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/typescript/lib/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionTable/PositionTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="172">
+          <caret line="1468" column="38" selection-start-line="1468" selection-start-column="38" selection-end-line="1468" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/PositionToolbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
             <element signature="e#299#356#0" expanded="true" />
@@ -914,160 +880,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php">
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/User/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/UserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/Position.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/locales/ru/translations.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/locales/en/translations.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchInput/index.js">
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="1" />
+          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="51" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/TextField/TextField.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="254" column="24" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="93" column="47" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserEdit/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Toast/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Toast/SuccessToast/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="39" selection-start-column="39" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Toast/ErrorToast/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/DatePickerField/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Toast/SuccessToast/SuccessToast.js">
+    <entry file="file://$PROJECT_DIR$/src/components/DatePickerField/DatePickerField.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="124" column="16" lean-forward="true" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php">
+    <entry file="file://$PROJECT_DIR$/public/locales/ru/translations.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="285">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/RemovePosition/RemovePosition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="51" column="11" lean-forward="true" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Toast/ErrorToast/ErrorToast.js">
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/UserType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/PositionType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/UserToolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -1076,24 +982,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/UserEdit/UserEdit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="74" column="11" lean-forward="true" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        <state relative-caret-position="846">
+          <caret line="110" column="9" lean-forward="true" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#624#647#0" expanded="true" />
+            <element signature="e#635#658#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/Position/components/PositionToolbar/components/AddPosition/AddPosition.js">
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserDetails/UserDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        <state relative-caret-position="504">
+          <caret line="133" column="56" lean-forward="true" selection-start-line="133" selection-start-column="56" selection-end-line="133" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/User/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/locales/en/translations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/UserList/components/AddUser/AddUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="953">
+          <caret line="106" column="15" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/User/components/UserToolbar/components/UserSalary/UserSalary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/SalaryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/QueryType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="293" column="26" selection-start-line="293" selection-start-column="26" selection-end-line="293" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/webonyx/graphql-php/src/Executor/ReferenceExecutor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="641" column="35" lean-forward="true" selection-start-line="641" selection-start-column="35" selection-end-line="641" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/Application/Type/MutationType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="135" column="43" lean-forward="true" selection-start-line="135" selection-start-column="43" selection-end-line="135" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphQL/graphql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>Unnamed</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -1,0 +1,10 @@
+.sidebar{
+  .drawerHeader {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    @media screen and(max-width: 1279px){
+      display: flex;
+    }
+  };
+}

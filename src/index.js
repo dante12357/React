@@ -11,7 +11,7 @@ import {InMemoryCache} from 'apollo-cache-inmemory';
 import {MuiPickersUtilsProvider} from "@material-ui/pickers";
 
 const httpLink = createHttpLink({
-    uri: 'http://10.0.0.24/GraphQL/graphql.php'
+    uri: '/GraphQL/graphql.php'
 });
 
 const client = new ApolloClient({

@@ -1,1 +1,7 @@
-{"version":3,"sourceRoot":"","sources":["positionTable.scss"],"names":[],"mappings":";AAQI;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA","file":"positionTable.css"}
+{
+"version": 3,
+"mappings": ";AAQI,kCAAK;EACH,MAAM,EAAE,OAAO;EACf,QAAQ,EAAE,QAAQ;AAGpB,+CAAkB;EAChB,OAAO,EAAE,GAAG;EACZ,OAAO,EAAE,YAAY;EACrB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK;AAGd,gDAAmB;EACjB,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,YAAY;EACrB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,KAAK",
+"sources": ["positionTable.scss"],
+"names": [],
+"file": "positionTable.css"
+}

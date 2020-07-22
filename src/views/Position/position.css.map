@@ -1,1 +1,7 @@
-{"version":3,"sourceRoot":"","sources":["position.scss"],"names":[],"mappings":"AAAA;EACE","file":"position.css"}
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACP,OAAO,EAAE,UAAU;EACnB,uBAAa;IACX,UAAU,EAAE,IAAI",
+"sources": ["position.scss"],
+"names": [],
+"file": "position.css"
+}

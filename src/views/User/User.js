@@ -18,7 +18,12 @@ const User_Query = gql`
             birthday,
             date_employment,
             probation,
+        },
+        userSalary(id: $id){
+            id,
             salary,
+            review_period,
+            active_from
         }
     }`
 

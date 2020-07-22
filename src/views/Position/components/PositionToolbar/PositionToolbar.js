@@ -3,7 +3,7 @@ import {AddPosition} from "./components";
 import PropTypes from 'prop-types';
 import {Card, IconButton, ListItem, ListItemSecondaryAction, ListItemText} from "@material-ui/core";
 import {NavLink as RouterLink} from "react-router-dom";
-//import ' ./positionToolbar.css'
+// import './positionToolbar.css'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import {useTranslation} from "react-i18next";
 
@@ -19,7 +19,6 @@ const PositionToolbar = props => {
                     component={RouterLink}
                     // size="small"
                     to={"/settings"}>
-
                     <ArrowLeftIcon/>
                 </IconButton>
                 <span>

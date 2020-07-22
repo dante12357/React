@@ -36,6 +36,27 @@ class QueryType extends ObjectType
                             return QueryType::allPositionsSelect();
                         }
                     ],
+                    'userSalary' => [
+                        'type' => Types::salary(),
+                        'description' => 'Зарпалата',
+                        'args' => [
+                            'id' => Types::int()
+                        ],
+                        'resolve' => function ($root, $args) {
+                            return QueryType::SalarySelect($root, $args);
+                        }
+                    ],
+
+                    'userSalaryHistory' => [
+                        'type' => Types::listOf(Types::salary()),
+                        'description' => 'История изменения зарплаты',
+                        'args' => [
+                            'id' => Types::int()
+                        ],
+                        'resolve' => function ($root, $args) {
+                            return QueryType::SalaryHistorySelect($root, $args);
+                        }
+                    ],
                     'getNumPosition' => [
                         'type' => Types::listOf(Types::position()),
                         'description' => 'Количество людей на должности',
@@ -64,6 +85,17 @@ class QueryType extends ObjectType
     public static function allPositionsSelect()
     {
         return Db::select('SELECT * FROM `positions`');
+
+    }
+
+    public static function SalarySelect($root, $args)
+    {
+        return Db::selectOne("SELECT * FROM salary WHERE user_id = {$args['id']}");
+
+    }
+    public static function SalaryHistorySelect($root, $args)
+    {
+        return Db::select("SELECT * FROM historySalary WHERE user_id = {$args['id']}");
 
     }
 

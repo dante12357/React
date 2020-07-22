@@ -41,10 +41,22 @@
 
     "Details": "Детали",
     "Employee Information": "Информация о сотруднике",
-    "Edit": "Изменить",
+    "Change": "Изменить",
+    "Employee deleted successfully": "Сотрудник успешно удален",
 
     "Employee editing": "Изменить сотрудника",
-    "No trial period": "Без испытательного срока"
+    "Cancel": "Отмена",
 
+    "Salary Info":"Salary Info",
+    "Last review date": "Last review date",
+    "Current salary":"Current salary",
+    "Next review date": "Next review date",
+    "Salary review period":"Salary review period",
+    "New salary":"New salary",
+    "Active from":"Active from",
+    "Review period":"Review period",
+    "Save":"Save",
+    "Notes":"Notes",
+    "Change history":"Change history"
 
 }
