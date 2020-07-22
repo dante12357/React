@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import './user.css'
-import {Query} from 'react-apollo';
 import {useQuery} from "@apollo/react-hooks";
 import gql from 'graphql-tag';
 import PropTypes from 'prop-types';
 import {UserToolbar} from "./components";
 
-// import UserToolbar from './components'
 const User_Query = gql`
     query ($id : Int!){
         user(id: $id){

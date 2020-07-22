@@ -1,15 +1,13 @@
-/* eslint-disable react/no-multi-comp */
-/* eslint-disable react/display-name */
-import React, {forwardRef} from 'react';
+
+import React, {useState} from 'react';
 import {NavLink as RouterLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
     List,
-    ListItem,
     ListItemText,
     ListItemSecondaryAction,
     IconButton,
-    Button, Divider, TableBody, TableRow, TableCell, Table
+    TableBody, TableRow, TableCell, Table
 } from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 import {useTranslation} from "react-i18next";

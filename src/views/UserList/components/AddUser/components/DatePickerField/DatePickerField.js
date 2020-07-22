@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {DatePicker} from '@material-ui/pickers';
-import {Field} from "formik";
-
 
 const DatePickerField = ({ field, form, ...other }) => {
     const currentError = form.errors[field.name];

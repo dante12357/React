@@ -18,12 +18,10 @@ import {
 } from '@material-ui/core';
 import ChevronRightIcon from '@material-ui/icons/ChevronLeft';
 import {makeStyles} from '@material-ui/core/styles';
-import {Query} from 'react-apollo'
 import {useMutation, useQuery} from '@apollo/react-hooks';
 import gql from 'graphql-tag'
 import {Formik, Field, Form} from 'formik'
 import * as yup from 'yup'
-import {toast} from 'react-toastify';
 import {DatePickerField} from "./components";
 import {User_Query} from "../../UserList";
 import {useTranslation} from "react-i18next";

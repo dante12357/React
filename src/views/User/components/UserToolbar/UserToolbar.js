@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import PropTypes from 'prop-types';
-import {Button, Tabs, Tab, Box, AppBar, Divider} from "@material-ui/core";
+import { Tabs, Tab, Box, Divider} from "@material-ui/core";
 import TabPanel from "./components/TabPanel";
 import {UserDetails, UserSalary} from "./components";
 import './userToolbar.css'

@@ -1,15 +1,14 @@
 import React, {} from 'react'
 import {AddPosition} from "./components";
 import PropTypes from 'prop-types';
-import {Card, IconButton, ListItem, ListItemSecondaryAction, ListItemText} from "@material-ui/core";
+import {IconButton, ListItemText} from "@material-ui/core";
 import {NavLink as RouterLink} from "react-router-dom";
-// import './positionToolbar.css'
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import {useTranslation} from "react-i18next";
 
 
 const PositionToolbar = props => {
-    const {onChange, value} = props;
+    const {} = props;
     const { t, i18n } = useTranslation('translation');
 
     return (
@@ -30,8 +29,6 @@ const PositionToolbar = props => {
     )
 };
 PositionToolbar.propTypes = {
-    onChange: PropTypes.func,
-    value: PropTypes.func,
 
 }
 export default PositionToolbar;

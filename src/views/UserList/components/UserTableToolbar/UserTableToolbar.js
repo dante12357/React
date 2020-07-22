@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {SearchInput} from '../../../../components';
 import './userTableToolbar.css'
-import {Button, Drawer, IconButton} from '@material-ui/core';
+import {Button} from '@material-ui/core';
 import AddUser from '../AddUser';
 import {useTranslation} from "react-i18next";
 

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {AppBar, Toolbar, Badge, Hidden, IconButton, ListItem} from '@material-ui/core';
+import {AppBar, Toolbar, Badge, Hidden, IconButton} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import InputIcon from '@material-ui/icons/Input';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { useTranslation } from 'react-i18next';
 
@@ -34,7 +33,7 @@ const Topbar = props => {
   return (
     <AppBar
       {...rest}
-      className={clsx(classes.appBar)}
+      classes={{appBar:classes.appBar}}
     >
       <Toolbar>
         <RouterLink to="/">

@@ -5,10 +5,8 @@ import {
 
 } from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
-import {Query} from 'react-apollo'
 import {useMutation} from '@apollo/react-hooks';
 import gql from 'graphql-tag'
-import {toast} from 'react-toastify';
 import {getNumPosition_Query} from "../../Position";
 import {useTranslation} from "react-i18next";
 import DeleteIcon from '@material-ui/icons/Delete';

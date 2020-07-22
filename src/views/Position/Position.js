@@ -1,10 +1,7 @@
-import React, {Component, useState} from 'react';
-
-import {Query} from 'react-apollo';
+import React, {useState} from 'react';
 import {useQuery} from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import {withRouter} from 'react-router'
-import {AddPosition} from './components'
 import {PositionTable} from './components'
 import {
     Card,
@@ -12,7 +9,6 @@ import {
 } from '@material-ui/core';
 
 import './position.css'
-import {SearchInput} from "../../components";
 import {PositionToolbar} from "./components"
 import {useTranslation} from "react-i18next";
 

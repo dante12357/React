@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {} from 'react';
 import {Input} from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
@@ -36,7 +36,6 @@ const SearchInput = props => {
     <Paper
       {...rest}
       className={clsx(classes.root, className)}
-
     >
 
       <SearchIcon className="icon" />

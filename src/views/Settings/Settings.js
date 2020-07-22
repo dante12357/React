@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
-import clsx from 'clsx';
 import {makeStyles} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import {Divider, Card} from '@material-ui/core';
+import {Card} from '@material-ui/core';
 import {SettingsNav} from './components';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import './settings.css';
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles(() => ({}));
 
 const Settings = props => {
-    const {open, variant, onClose} = props;
+    const {} = props;
 
     const classes = useStyles();
 
@@ -44,9 +43,6 @@ const Settings = props => {
 };
 
 Settings.propTypes = {
-    onClose: PropTypes.func,
-    open: PropTypes.bool.isRequired,
-    variant: PropTypes.string.isRequired
 
 };
 

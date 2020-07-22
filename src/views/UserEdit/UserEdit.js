@@ -1,33 +1,27 @@
 import React, {useState} from 'react'
 import PropTypes from "prop-types";
-import {toast} from "react-toastify";
 import {
     Button,
-    CardActions,
     CardContent,
     CardHeader, Checkbox,
     Divider,
-    Drawer,
     FormControlLabel,
     Grid,
-    IconButton, InputAdornment,
     MenuItem,
     TextField,
-    Card, TableCell
+    Card
 } from "@material-ui/core";
 import {Field, Form, Formik} from "formik";
 import {DatePickerField} from "../UserList/components/AddUser/components";
 import {useMutation, useQuery} from '@apollo/react-hooks';
 import gql from 'graphql-tag'
 import * as yup from 'yup'
-// import {toast} from 'react-toastify';
 import './userEdit.css'
 import {makeStyles} from "@material-ui/core/styles";
 import {useTranslation} from "react-i18next";
 import ErrorToast from '../../components/Toast/ErrorToast'
 import SuccessToast from "../../components/Toast/SuccessToast";
 import {NavLink as RouterLink} from "react-router-dom";
-import DeleteIcon from "@material-ui/core/SvgIcon/SvgIcon";
 
 
 const User_Query = gql`

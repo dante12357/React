@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 import {useMediaQuery} from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {useTheme } from '@material-ui/core/styles';
 import './main.css'
-import {Sidebar, Topbar, Footer} from './components';
+import {Sidebar, Topbar} from './components';
 
 
 const Main = props => {

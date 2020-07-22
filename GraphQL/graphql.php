@@ -28,15 +28,6 @@ try {
     $input = json_decode($rawInput, true);
     $query = $input['query'];
 
-//    if(isset($input['variables'])){
-//        $variables = json_decode($input['variables'], true);
-//    }
-//    else {
-//        $variables = null;
-//
-//    }
-//    $variables = isset($input['variables']) ? json_decode($input['variables'], true) : null;
-//    var_dump($variables);
     $schema = new Schema([
         'query' => Types::query(),
         'mutation' => Types::mutation()

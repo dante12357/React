@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
-import clsx from 'clsx';
+import React, {} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import {Divider, Drawer, IconButton, List} from '@material-ui/core';
-import {Profile, SidebarNav} from './components';
+import {Drawer, IconButton} from '@material-ui/core';
+import {SidebarNav} from './components';
 import PeopleIcon from '@material-ui/icons/People';
 import SettingsIcon from '@material-ui/icons/Settings';
 import CloseIcon from '@material-ui/icons/Close';
@@ -59,9 +58,6 @@ const Sidebar = props => {
         </IconButton>
 
       </div>
-
-        {/*<Profile />*/}
-        {/*<Divider />*/}
         <SidebarNav
             closeSidebar={closeSidebar}
             pages={pages}

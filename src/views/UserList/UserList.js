@@ -1,12 +1,10 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import UserTable from './components/UserTable/UserTable'
 
 import './userList.css'
 import UserTableToolbar from './components/UserTableToolbar';
-import {Query} from 'react-apollo';
 import {useQuery} from '@apollo/react-hooks'
 import gql from 'graphql-tag';
-import {withRouter} from 'react-router'
 
 
 const User_Query = gql`

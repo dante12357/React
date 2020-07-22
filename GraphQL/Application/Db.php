@@ -75,6 +75,10 @@ class Db
 //        $success = $statement->execute();
         return $statement ? self::$pdo->lastInsertId() : null;
     }
+    public function __destruct()
+    {
+       self::$pdo->close();
+    }
 }
 
 
